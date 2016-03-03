@@ -28,34 +28,39 @@ public class MicroondasUI extends javax.swing.JFrame {
     private void initComponents() {
 
         Botonaso = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Comida = new javax.swing.JButton();
         Texto = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        Tiempo = new javax.swing.JTextField();
         Botones = new javax.swing.JPanel();
         t1 = new javax.swing.JButton();
         t2 = new javax.swing.JButton();
-        etc = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        t3 = new javax.swing.JButton();
+        t4 = new javax.swing.JButton();
+        t5 = new javax.swing.JButton();
+        t6 = new javax.swing.JButton();
+        t7 = new javax.swing.JButton();
+        t8 = new javax.swing.JButton();
+        t9 = new javax.swing.JButton();
+        t0 = new javax.swing.JButton();
+        bStart = new javax.swing.JButton();
+        bStop = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Botonaso.setLayout(new java.awt.GridLayout());
 
-        jButton1.setText("Comida");
-        Botonaso.add(jButton1);
+        Comida.setText("Comida");
+        Comida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComidaActionPerformed(evt);
+            }
+        });
+        Botonaso.add(Comida);
 
         Texto.setLayout(new java.awt.GridLayout());
 
-        jTextField1.setText("Tiempo");
-        Texto.add(jTextField1);
+        Tiempo.setText("Inserte tiempo");
+        Texto.add(Tiempo);
 
         Botones.setLayout(new java.awt.GridLayout(4, 3));
 
@@ -65,46 +70,46 @@ public class MicroondasUI extends javax.swing.JFrame {
         t2.setText("2");
         Botones.add(t2);
 
-        etc.setText("3");
-        Botones.add(etc);
+        t3.setText("3");
+        Botones.add(t3);
 
-        jButton6.setText("4");
-        Botones.add(jButton6);
+        t4.setText("4");
+        Botones.add(t4);
 
-        jButton5.setText("5");
-        Botones.add(jButton5);
+        t5.setText("5");
+        Botones.add(t5);
 
-        jButton9.setText("6");
-        Botones.add(jButton9);
+        t6.setText("6");
+        Botones.add(t6);
 
-        jButton8.setText("7");
-        Botones.add(jButton8);
+        t7.setText("7");
+        Botones.add(t7);
 
-        jButton7.setText("8");
-        Botones.add(jButton7);
+        t8.setText("8");
+        Botones.add(t8);
 
-        jButton10.setText("9");
-        Botones.add(jButton10);
+        t9.setText("9");
+        Botones.add(t9);
 
-        jButton11.setText("0");
-        Botones.add(jButton11);
+        t0.setText("0");
+        Botones.add(t0);
 
-        jButton12.setText("Start");
-        Botones.add(jButton12);
+        bStart.setText("Start");
+        Botones.add(bStart);
 
-        jButton13.setText("Stop");
-        Botones.add(jButton13);
+        bStop.setText("Stop");
+        Botones.add(bStop);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Botonaso, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Botonaso, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Texto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Botones, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)))
+                    .addComponent(Botones, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,11 +117,15 @@ public class MicroondasUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Texto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Botones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Botones, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ComidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComidaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,20 +166,20 @@ public class MicroondasUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Botonaso;
     private javax.swing.JPanel Botones;
+    private javax.swing.JButton Comida;
     private javax.swing.JPanel Texto;
-    private javax.swing.JButton etc;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField Tiempo;
+    private javax.swing.JButton bStart;
+    private javax.swing.JButton bStop;
+    private javax.swing.JButton t0;
     private javax.swing.JButton t1;
     private javax.swing.JButton t2;
+    private javax.swing.JButton t3;
+    private javax.swing.JButton t4;
+    private javax.swing.JButton t5;
+    private javax.swing.JButton t6;
+    private javax.swing.JButton t7;
+    private javax.swing.JButton t8;
+    private javax.swing.JButton t9;
     // End of variables declaration//GEN-END:variables
 }
