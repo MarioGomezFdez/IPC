@@ -5,6 +5,12 @@
  */
 package microondasui;
 
+import static java.lang.Integer.parseInt;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  *
  * @author Miguel
@@ -14,13 +20,16 @@ public class MicroondasUI extends javax.swing.JFrame {
     /**
      * Creates new form MicroUI
      */
-    
-    private boolean funcionando, lleno;
-    
+    boolean funcionando, lleno;
+    static int interval;
+    static Timer timer;
+    private Thread crono;
+
     public MicroondasUI() {
         initComponents();
         funcionando = false;
         lleno = false;
+        crono = new Thread();
     }
 
     /**
@@ -55,7 +64,7 @@ public class MicroondasUI extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(613, 326));
         setPreferredSize(new java.awt.Dimension(613, 326));
 
-        Botonaso.setLayout(new java.awt.GridLayout());
+        Botonaso.setLayout(new java.awt.GridLayout(1, 0));
 
         comida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         comida.setText("Vacío");
@@ -66,7 +75,7 @@ public class MicroondasUI extends javax.swing.JFrame {
         });
         Botonaso.add(comida);
 
-        Texto.setLayout(new java.awt.GridLayout());
+        Texto.setLayout(new java.awt.GridLayout(1, 0));
 
         textoTiempo.setEditable(false);
         textoTiempo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -198,108 +207,139 @@ public class MicroondasUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void t1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t1MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("1");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"1");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "1");
         }
     }//GEN-LAST:event_t1MouseClicked
 
     private void t2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t2MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("2");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"2");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "2");
         }
     }//GEN-LAST:event_t2MouseClicked
 
     private void t3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t3MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("3");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"3");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "3");
         }
     }//GEN-LAST:event_t3MouseClicked
 
     private void t4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t4MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("4");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"4");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "4");
         }
     }//GEN-LAST:event_t4MouseClicked
 
     private void t5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t5MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("5");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"5");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "5");
         }
     }//GEN-LAST:event_t5MouseClicked
 
     private void t6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t6MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("6");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"6");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "6");
         }
     }//GEN-LAST:event_t6MouseClicked
 
     private void t7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t7MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("7");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"7");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "7");
         }
     }//GEN-LAST:event_t7MouseClicked
 
     private void t8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t8MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("8");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"8");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "8");
         }
     }//GEN-LAST:event_t8MouseClicked
 
     private void t9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t9MouseClicked
-        if (funcionando){ 
-        }else if(textoTiempo.getText().equals("Inserte tiempo")){
+        if (funcionando || textoTiempo.getText().equals("0")) {
+        } else if (textoTiempo.getText().equals("Inserte tiempo")) {
             textoTiempo.setText("9");
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"9");
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "9");
         }
     }//GEN-LAST:event_t9MouseClicked
 
     private void t0MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_t0MouseClicked
-        if (funcionando || textoTiempo.getText().equals("Inserte tiempo")){ 
-        }else{
-            textoTiempo.setText(textoTiempo.getText()+"0");
+        if (funcionando || textoTiempo.getText().equals("Inserte tiempo") || textoTiempo.getText().equals("0")) {
+        } else {
+            textoTiempo.setText(textoTiempo.getText() + "0");
         }
     }//GEN-LAST:event_t0MouseClicked
 
     private void bStartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bStartMouseClicked
-        // Falta añadir la funcion de cronometro
+        if (!funcionando && parseInt(textoTiempo.getText()) != 0){
+            funcionando = true;
+            cuentaAtras();
+        }
+
     }//GEN-LAST:event_bStartMouseClicked
 
-    private void bStopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bStopMouseClicked
-        if (!funcionando && !textoTiempo.getText().equals("Inserte tiempo")){
-            textoTiempo.setText("Inserte tiempo");
+    private void cuentaAtras() {
+        int delay = 1000, period = 1000;
+        interval = parseInt(textoTiempo.getText());
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                textoTiempo.setText(Integer.toString(setInterval()));
+            }
+        }, delay, period);
+    }
+
+    private int setInterval() {
+        if (!funcionando || interval <= 1) {
+            timer.cancel();
         }
+
+        return --interval;
+    }
+
+    private void bStopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bStopMouseClicked
+        parar();
     }//GEN-LAST:event_bStopMouseClicked
 
+    private void parar(){
+      //  if (!funcionando && !textoTiempo.getText().equals("Inserte tiempo")) {
+    //        textoTiempo.setText("Inserte tiempo");
+  //      }
+        funcionando = false;
+        if (textoTiempo.getText().equals("0")){  
+           textoTiempo.setText("Inserte tiempo");
+        }
+    }
+    
     private void comidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comidaMouseClicked
-        if (lleno){
+        if (lleno) {
             lleno = false;
             comida.setText("Vacío");
-        } else if (!lleno){
+        } else if (!lleno) {
             lleno = true;
             comida.setText("Comida");
         }
