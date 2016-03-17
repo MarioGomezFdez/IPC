@@ -66,7 +66,6 @@ public class ColorChooser extends javax.swing.JFrame {
         tDec.setText("Pulse el botón Obtener");
 
         tColor.setEditable(false);
-        tColor.setBackground(new java.awt.Color(255, 255, 255));
         tColor.setMaximumSize(new java.awt.Dimension(46, 46));
         tColor.setMinimumSize(new java.awt.Dimension(46, 46));
         tColor.setPreferredSize(new java.awt.Dimension(46, 46));
@@ -93,7 +92,7 @@ public class ColorChooser extends javax.swing.JFrame {
                             .addComponent(tDec, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tHexad, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(obtener, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                        .addComponent(obtener, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())

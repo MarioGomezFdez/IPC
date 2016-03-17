@@ -13,7 +13,7 @@ import java.util.TimerTask;
 
 /**
  *
- * @author Miguel
+ * @author Mario Gomez Fernandez
  */
 public class MicroondasUI extends javax.swing.JFrame {
 
