@@ -7,8 +7,28 @@ package PropPantalla.ui;
 
 /**
  *
- * @author Mario
+ * @author Mario Gómez
+ * @author Miguel Bayón
  */
 public class PropPantallaC {
-    
+
+    private PropPantallaV vista;
+
+    public PropPantallaC(PropPantallaV vista) {
+        this.vista = new PropPantallaV();
+    }
+
+    public void aceptar() {
+        this.guardar();
+        this.exit();
+    }
+
+    public void guardar() {
+        System.out.println("Guardado");
+    }
+
+    public void exit() {
+        System.exit(0);
+    }
+
 }

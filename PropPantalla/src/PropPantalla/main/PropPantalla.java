@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PropPantalla.m;
+package PropPantalla.main;
 
 /**
  *
- * @author Mario
+ * @author Miguel
  */
-public class PropPantallaM {
+public class PropPantalla {
     
 }
