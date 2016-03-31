@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package my.PropPantalla;
+package PropPantalla.ui;
 
 /**
  *
@@ -78,6 +78,7 @@ public class PropPantallaV extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Giro"));
 
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setSelected(true);
         jRadioButton1.setText("Horizontal");
 
         buttonGroup1.add(jRadioButton2);
@@ -117,7 +118,8 @@ public class PropPantallaV extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Resolución"));
 
-        ResolucionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ResolucionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "800x600", "1024x768", "1360x768", "1366x768" }));
+        ResolucionCB.setSelectedIndex(3);
         ResolucionCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResolucionCBActionPerformed(evt);
@@ -143,7 +145,8 @@ public class PropPantallaV extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Colores"));
 
-        ColoresCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ColoresCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8 bits", "16 bits", "32 bits", "64 bits" }));
+        ColoresCB.setSelectedIndex(2);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -189,9 +192,24 @@ public class PropPantallaV extends javax.swing.JFrame {
         Aplicar.setText("Aplicar");
 
         Cancelar.setText("Cancelar");
+        Cancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CancelarMouseClicked(evt);
+            }
+        });
 
         Aceptar.setText("Aceptar");
         Aceptar.setToolTipText("");
+        Aceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AceptarMouseClicked(evt);
+            }
+        });
+        Aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AceptarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -238,9 +256,21 @@ public class PropPantallaV extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void CancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CancelarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CancelarMouseClicked
+
+    private void AceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AceptarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AceptarMouseClicked
+
     private void ResolucionCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResolucionCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ResolucionCBActionPerformed
+
+    private void AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AceptarActionPerformed
 
     /**
      * @param args the command line arguments
