@@ -36,10 +36,10 @@ public class PropPantallaV extends javax.swing.JFrame {
         jSlider1 = new javax.swing.JSlider();
         jSlider2 = new javax.swing.JSlider();
         jPanel4 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        Horizontal = new javax.swing.JRadioButton();
+        Vertical = new javax.swing.JRadioButton();
+        Derecha = new javax.swing.JRadioButton();
+        Izquierda = new javax.swing.JRadioButton();
         jPanel5 = new javax.swing.JPanel();
         ResolucionCB = new javax.swing.JComboBox<>();
         jPanel6 = new javax.swing.JPanel();
@@ -77,17 +77,17 @@ public class PropPantallaV extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Giro"));
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Horizontal");
+        buttonGroup1.add(Horizontal);
+        Horizontal.setText("Horizontal");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Vertical(90º)");
+        buttonGroup1.add(Vertical);
+        Vertical.setText("Vertical(90º)");
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Derecha(180º)");
+        buttonGroup1.add(Derecha);
+        Derecha.setText("Derecha(180º)");
 
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("Izquierda(270º)");
+        buttonGroup1.add(Izquierda);
+        Izquierda.setText("Izquierda(270º)");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -96,33 +96,28 @@ public class PropPantallaV extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(Horizontal)
+                    .addComponent(Vertical)
+                    .addComponent(Derecha)
+                    .addComponent(Izquierda))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jRadioButton1)
+                .addComponent(Horizontal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(Vertical)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(Derecha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton4)
+                .addComponent(Izquierda)
                 .addGap(0, 4, Short.MAX_VALUE))
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Resolución"));
 
-        ResolucionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        ResolucionCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ResolucionCBActionPerformed(evt);
-            }
-        });
+        ResolucionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1366x768", "1024x768", "1280x1024", "1280x800", "1920x1080", "800x600" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -143,7 +138,7 @@ public class PropPantallaV extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Colores"));
 
-        ColoresCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ColoresCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LCD color", "Adobe RGB", "HD 709-A", "Perfil RGB generico", "SD 170M-A" }));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -189,6 +184,11 @@ public class PropPantallaV extends javax.swing.JFrame {
         Aplicar.setText("Aplicar");
 
         Cancelar.setText("Cancelar");
+        Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelarActionPerformed(evt);
+            }
+        });
 
         Aceptar.setText("Aceptar");
         Aceptar.setToolTipText("");
@@ -238,51 +238,27 @@ public class PropPantallaV extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ResolucionCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResolucionCBActionPerformed
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ResolucionCBActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_CancelarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PropPantallaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PropPantallaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PropPantallaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PropPantallaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PropPantallaV().setVisible(true);
-            }
-        });
-    }
+   
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Aceptar;
     private javax.swing.JButton Aplicar;
     private javax.swing.JButton Cancelar;
     private javax.swing.JComboBox<String> ColoresCB;
+    private javax.swing.JRadioButton Derecha;
+    private javax.swing.JRadioButton Horizontal;
+    private javax.swing.JRadioButton Izquierda;
     private javax.swing.JComboBox<String> ResolucionCB;
+    private javax.swing.JRadioButton Vertical;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -290,10 +266,6 @@ public class PropPantallaV extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JSlider jSlider2;
     // End of variables declaration//GEN-END:variables
