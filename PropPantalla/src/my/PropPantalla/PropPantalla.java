@@ -9,7 +9,7 @@ package my.PropPantalla;
  *
  * @author Mario
  */
-public class PropPantallaM {
+public class PropPantalla {
     
      public static void main(String args[]) {
         /* Set the Nimbus look and feel */
