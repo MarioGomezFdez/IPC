@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PropPantalla.m;
+package my.PropPantalla;
 
 /**
  *
- * @author Miguel Bayón
- * @author Mario Gómez
+ * @author Mario
  */
-public class Valor {
+public class PropPantallaM {
     
      public static void main(String args[]) {
         /* Set the Nimbus look and feel */
