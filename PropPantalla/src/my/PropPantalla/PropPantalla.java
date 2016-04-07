@@ -8,6 +8,7 @@ package my.PropPantalla;
 /**
  *
  * @author Mario
+ * @author Miguel
  */
 public class PropPantalla {
     

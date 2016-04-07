@@ -9,6 +9,7 @@ import java.io.*;
 /**
  *
  * @author Mario
+ * @author Miguel
  */
 public class PropPantallaC {
     
@@ -30,7 +31,6 @@ public class PropPantallaC {
     }
     
     public void guardar(){
-        System.out.println("Guardado");
         valor.setBrillo(vista.getBrillo());
         valor.setColor(vista.getColor());
         valor.setContraste(vista.getContraste());

@@ -78,11 +78,11 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Aceptar" min="-2" max="-2" attributes="0"/>
+                      <Component id="aceptar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Aplicar" min="-2" max="-2" attributes="0"/>
+                      <Component id="aplicar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Cancelar" min="-2" max="-2" attributes="0"/>
+                      <Component id="cancelar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -100,9 +100,9 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Aplicar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Aceptar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="aplicar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="aceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -230,9 +230,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="horizontal" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Vertical" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Derecha" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Izquierda" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="vertical" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="h_invertido" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="v_invertido" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -243,11 +243,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="horizontal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Vertical" min="-2" max="-2" attributes="0"/>
+                          <Component id="vertical" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Derecha" min="-2" max="-2" attributes="0"/>
+                          <Component id="h_invertido" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Izquierda" min="-2" max="-2" attributes="0"/>
+                          <Component id="v_invertido" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -263,7 +263,7 @@
                     <Property name="text" type="java.lang.String" value="Horizontal (0&#xba;)"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="Vertical">
+                <Component class="javax.swing.JRadioButton" name="vertical">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup1"/>
@@ -271,18 +271,15 @@
                     <Property name="text" type="java.lang.String" value="Vertical (90&#xba;)"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="Derecha">
+                <Component class="javax.swing.JRadioButton" name="h_invertido">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Horizontal invertido (180&#xba;)"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DerechaActionPerformed"/>
-                  </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="Izquierda">
+                <Component class="javax.swing.JRadioButton" name="v_invertido">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroup1"/>
@@ -340,29 +337,29 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="Cancelar">
+            <Component class="javax.swing.JButton" name="cancelar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CancelarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="Aplicar">
+            <Component class="javax.swing.JButton" name="aplicar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aplicar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AplicarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aplicarActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="Aceptar">
+            <Component class="javax.swing.JButton" name="aceptar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aceptar"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AceptarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aceptarActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

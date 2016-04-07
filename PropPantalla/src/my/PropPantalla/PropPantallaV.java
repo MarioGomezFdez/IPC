@@ -45,14 +45,14 @@ public class PropPantallaV extends javax.swing.JFrame {
         resolucionCB = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         horizontal = new javax.swing.JRadioButton();
-        Vertical = new javax.swing.JRadioButton();
-        Derecha = new javax.swing.JRadioButton();
-        Izquierda = new javax.swing.JRadioButton();
+        vertical = new javax.swing.JRadioButton();
+        h_invertido = new javax.swing.JRadioButton();
+        v_invertido = new javax.swing.JRadioButton();
         jPanel6 = new javax.swing.JPanel();
         coloresCB = new javax.swing.JComboBox<>();
-        Cancelar = new javax.swing.JButton();
-        Aplicar = new javax.swing.JButton();
-        Aceptar = new javax.swing.JButton();
+        cancelar = new javax.swing.JButton();
+        aplicar = new javax.swing.JButton();
+        aceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,19 +114,14 @@ public class PropPantallaV extends javax.swing.JFrame {
         horizontal.setSelected(true);
         horizontal.setText("Horizontal (0º)");
 
-        buttonGroup1.add(Vertical);
-        Vertical.setText("Vertical (90º)");
+        buttonGroup1.add(vertical);
+        vertical.setText("Vertical (90º)");
 
-        buttonGroup1.add(Derecha);
-        Derecha.setText("Horizontal invertido (180º)");
-        Derecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DerechaActionPerformed(evt);
-            }
-        });
+        buttonGroup1.add(h_invertido);
+        h_invertido.setText("Horizontal invertido (180º)");
 
-        buttonGroup1.add(Izquierda);
-        Izquierda.setText("Vertical invertido (270º)");
+        buttonGroup1.add(v_invertido);
+        v_invertido.setText("Vertical invertido (270º)");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -136,9 +131,9 @@ public class PropPantallaV extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(horizontal)
-                    .addComponent(Vertical)
-                    .addComponent(Derecha)
-                    .addComponent(Izquierda))
+                    .addComponent(vertical)
+                    .addComponent(h_invertido)
+                    .addComponent(v_invertido))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -146,11 +141,11 @@ public class PropPantallaV extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(horizontal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Vertical)
+                .addComponent(vertical)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Derecha)
+                .addComponent(h_invertido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Izquierda)
+                .addComponent(v_invertido)
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
@@ -175,25 +170,25 @@ public class PropPantallaV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Cancelar.setText("Cancelar");
-        Cancelar.addActionListener(new java.awt.event.ActionListener() {
+        cancelar.setText("Cancelar");
+        cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CancelarActionPerformed(evt);
+                cancelarActionPerformed(evt);
             }
         });
 
-        Aplicar.setText("Aplicar");
-        Aplicar.addActionListener(new java.awt.event.ActionListener() {
+        aplicar.setText("Aplicar");
+        aplicar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AplicarActionPerformed(evt);
+                aplicarActionPerformed(evt);
             }
         });
 
-        Aceptar.setText("Aceptar");
-        Aceptar.setToolTipText("");
-        Aceptar.addActionListener(new java.awt.event.ActionListener() {
+        aceptar.setText("Aceptar");
+        aceptar.setToolTipText("");
+        aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AceptarActionPerformed(evt);
+                aceptarActionPerformed(evt);
             }
         });
 
@@ -212,11 +207,11 @@ public class PropPantallaV extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Aceptar)
+                .addComponent(aceptar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Aplicar)
+                .addComponent(aplicar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Cancelar)
+                .addComponent(cancelar)
                 .addGap(18, 18, 18))
         );
         jPanel2Layout.setVerticalGroup(
@@ -230,9 +225,9 @@ public class PropPantallaV extends javax.swing.JFrame {
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cancelar)
-                    .addComponent(Aplicar)
-                    .addComponent(Aceptar))
+                    .addComponent(cancelar)
+                    .addComponent(aplicar)
+                    .addComponent(aceptar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -266,22 +261,18 @@ public class PropPantallaV extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
-        // TODO add your handling code here:
+    private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
+     
         control.exit();
-    }//GEN-LAST:event_CancelarActionPerformed
+    }//GEN-LAST:event_cancelarActionPerformed
 
-    private void AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarActionPerformed
+    private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
         control.aceptar();
-    }//GEN-LAST:event_AceptarActionPerformed
+    }//GEN-LAST:event_aceptarActionPerformed
 
-    private void AplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AplicarActionPerformed
+    private void aplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aplicarActionPerformed
         control.guardar();
-    }//GEN-LAST:event_AplicarActionPerformed
-
-    private void DerechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DerechaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DerechaActionPerformed
+    }//GEN-LAST:event_aplicarActionPerformed
 
     public int getBrillo(){
         return brillo.getValue();
@@ -302,11 +293,11 @@ public class PropPantallaV extends javax.swing.JFrame {
     public int getOrient(){
         if(horizontal.isSelected()){
             return 0;
-        } else if(Vertical.isSelected()){
+        } else if(vertical.isSelected()){
             return 1;
-        } else if (Izquierda.isSelected()){
+        } else if (v_invertido.isSelected()){
             return 2;
-        } else if (Derecha.isSelected()){
+        } else if (h_invertido.isSelected()){
             return 3;
         }
         return 0;
@@ -334,13 +325,13 @@ public class PropPantallaV extends javax.swing.JFrame {
                 horizontal.setSelected(true);
                 break;
             case 1:
-                Vertical.setSelected(true);
+                vertical.setSelected(true);
                 break;
             case 2:
-                Izquierda.setSelected(true);
+                v_invertido.setSelected(true);
                 break;
             case 3:
-                Derecha.setSelected(true);
+                h_invertido.setSelected(true);
                 break;
             default:
                 horizontal.setSelected(true);
@@ -354,16 +345,14 @@ public class PropPantallaV extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Aceptar;
-    private javax.swing.JButton Aplicar;
-    private javax.swing.JButton Cancelar;
-    private javax.swing.JRadioButton Derecha;
-    private javax.swing.JRadioButton Izquierda;
-    private javax.swing.JRadioButton Vertical;
+    private javax.swing.JButton aceptar;
+    private javax.swing.JButton aplicar;
     private javax.swing.JSlider brillo;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton cancelar;
     private javax.swing.JComboBox<String> coloresCB;
     private javax.swing.JSlider contraste;
+    private javax.swing.JRadioButton h_invertido;
     private javax.swing.JRadioButton horizontal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -372,5 +361,7 @@ public class PropPantallaV extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JComboBox<String> resolucionCB;
+    private javax.swing.JRadioButton v_invertido;
+    private javax.swing.JRadioButton vertical;
     // End of variables declaration//GEN-END:variables
 }
