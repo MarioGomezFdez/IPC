@@ -1,5 +1,6 @@
-package my.PropPantalla;
+package my.PropPantalla.main;
 
+import my.PropPantalla.ui.PropPantallaV;
 import javax.swing.UIManager;
 
 /**

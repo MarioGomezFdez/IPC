@@ -1,4 +1,4 @@
-package my.PropPantalla;
+package my.PropPantalla.model;
 
 /**
  *
