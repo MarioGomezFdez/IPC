@@ -5,18 +5,25 @@
  */
 package Datos.ui;
 import java.awt.Color;
+import javax.swing.UIManager;
 
 /**
  *
  * @author Mario
  */
 public class DatosV extends javax.swing.JFrame {
-
+    private DatosC controlador;
     /**
      * Creates new form DatosV
      */
     public DatosV() {
         initComponents();
+        TextNombre.setForeground(Color.GRAY);
+        TextAp1.setForeground(Color.GRAY);
+        TextAp2.setForeground(Color.GRAY);
+        TextCorreo.setForeground(Color.GRAY);
+        TextNIF.setForeground(Color.GRAY);
+        Continuar.requestFocus();
     }
 
     /**
@@ -67,14 +74,46 @@ public class DatosV extends javax.swing.JFrame {
             }
         });
 
-        TextAp1.setText("Ap1");
+        TextAp1.setText("Primer apellido");
+        TextAp1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TextAp1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TextAp1FocusLost(evt);
+            }
+        });
 
-        TextAp2.setText("Ap2");
+        TextAp2.setText("Segundo apellido");
+        TextAp2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TextAp2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TextAp2FocusLost(evt);
+            }
+        });
 
         TextCorreo.setText("Correo");
+        TextCorreo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TextCorreoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TextCorreoFocusLost(evt);
+            }
+        });
 
         TextNIF.setText("NIF");
         TextNIF.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        TextNIF.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TextNIFFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TextNIFFocusLost(evt);
+            }
+        });
 
         RellenarChk.setText("Rellenar con datos del solicitante");
         RellenarChk.addActionListener(new java.awt.event.ActionListener() {
@@ -264,13 +303,68 @@ public class DatosV extends javax.swing.JFrame {
 
     private void TextNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNombreFocusLost
         if(TextNombre.getText().equals("")){
-
             TextNombre.setText("Nombre");
           TextNombre.setForeground(Color.GRAY);
       }
         
         
     }//GEN-LAST:event_TextNombreFocusLost
+
+    private void TextAp1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp1FocusGained
+        TextAp1.setForeground(Color.BLACK);
+        if(TextAp1.getText().equals("Primer apellido")){
+             TextAp1.setText("");
+        }
+    }//GEN-LAST:event_TextAp1FocusGained
+
+    private void TextAp1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp1FocusLost
+        if(TextAp1.getText().equals("")){
+            TextAp1.setText("Primer apellido");
+            TextAp1.setForeground(Color.GRAY);
+       }
+    }//GEN-LAST:event_TextAp1FocusLost
+
+    private void TextAp2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp2FocusGained
+        TextAp2.setForeground(Color.BLACK);
+        if(TextAp2.getText().equals("Segundo apellido")){
+             TextAp2.setText("");
+        }
+    }//GEN-LAST:event_TextAp2FocusGained
+
+    private void TextAp2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp2FocusLost
+        if(TextAp2.getText().equals("")){
+            TextAp2.setText("Segundo apellido");
+               TextAp2.setForeground(Color.GRAY);
+       }
+    }//GEN-LAST:event_TextAp2FocusLost
+
+    private void TextCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextCorreoFocusGained
+        TextCorreo.setForeground(Color.BLACK);
+        if(TextCorreo.getText().equals("Correo")){
+             TextCorreo.setText("");
+        }
+    }//GEN-LAST:event_TextCorreoFocusGained
+
+    private void TextCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextCorreoFocusLost
+        if(TextCorreo.getText().equals("")){
+        TextCorreo.setText("Correo");
+        TextCorreo.setForeground(Color.GRAY);
+       }
+    }//GEN-LAST:event_TextCorreoFocusLost
+
+    private void TextNIFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNIFFocusGained
+        TextNIF.setForeground(Color.BLACK);
+        if(TextNIF.getText().equals("NIF")){
+             TextNIF.setText("");
+        }
+    }//GEN-LAST:event_TextNIFFocusGained
+
+    private void TextNIFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNIFFocusLost
+        if(TextNIF.getText().equals("")){
+        TextNIF.setText("NIF");
+        TextNIF.setForeground(Color.GRAY);
+       }
+    }//GEN-LAST:event_TextNIFFocusLost
 
     public String[] creaFechas(){
         String[] fechas = new String [99];
@@ -298,12 +392,7 @@ public class DatosV extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(DatosV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
