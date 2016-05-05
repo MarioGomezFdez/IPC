@@ -9,7 +9,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Mario 
+ * @author Mario  
  */
 public class DatosV extends javax.swing.JFrame {
     private DatosC controlador;
