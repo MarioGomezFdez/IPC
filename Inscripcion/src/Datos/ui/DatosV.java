@@ -27,22 +27,175 @@ public class DatosV extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        GroupCentro = new javax.swing.ButtonGroup();
+        GroupSexo = new javax.swing.ButtonGroup();
+        DatosPart = new javax.swing.JPanel();
+        TextNombre = new javax.swing.JTextField();
+        TextAp1 = new javax.swing.JTextField();
+        TextAp2 = new javax.swing.JTextField();
+        TextCorreo = new javax.swing.JTextField();
+        TextNIF = new javax.swing.JTextField();
+        RellenarChk = new javax.swing.JCheckBox();
+        ButHombre = new javax.swing.JRadioButton();
+        ButMujer = new javax.swing.JRadioButton();
+        Centro = new javax.swing.JLabel();
+        ButUVa = new javax.swing.JRadioButton();
+        ButOtro = new javax.swing.JRadioButton();
+        ButNinguno = new javax.swing.JRadioButton();
+        Sexo = new javax.swing.JLabel();
+        Continuar = new javax.swing.JButton();
+        Volver = new javax.swing.JButton();
+        Fecha = new javax.swing.JLabel();
+        CmbDia = new javax.swing.JComboBox<>();
+        CmbMes = new javax.swing.JComboBox<>();
+        CmbAno = new javax.swing.JComboBox<>();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        DatosPart.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Participante"));
+
+        TextNombre.setText("Nombre");
+
+        TextAp1.setText("Ap1");
+
+        TextAp2.setText("Ap2");
+
+        TextCorreo.setText("Correo");
+
+        TextNIF.setText("NIF");
+
+        RellenarChk.setText("Rellenar con datos del solicitante");
+
+        GroupSexo.add(ButHombre);
+        ButHombre.setText("Hombre");
+
+        GroupSexo.add(ButMujer);
+        ButMujer.setText("Mujer");
+
+        Centro.setText("Centro del que procede");
+
+        GroupCentro.add(ButUVa);
+        ButUVa.setText("UVa");
+
+        GroupCentro.add(ButOtro);
+        ButOtro.setText("Otro");
+
+        GroupCentro.add(ButNinguno);
+        ButNinguno.setText("Ninguno");
+
+        Sexo.setText("Sexo");
+
+        Continuar.setText("Continuar");
+
+        Volver.setText("Volver");
+
+        Fecha.setText("Fecha");
+
+        CmbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+
+        CmbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" }));
+
+        CmbAno.setModel(new javax.swing.DefaultComboBoxModel<>(creaFechas()));
+
+        javax.swing.GroupLayout DatosPartLayout = new javax.swing.GroupLayout(DatosPart);
+        DatosPart.setLayout(DatosPartLayout);
+        DatosPartLayout.setHorizontalGroup(
+            DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DatosPartLayout.createSequentialGroup()
+                        .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Centro)
+                            .addGroup(DatosPartLayout.createSequentialGroup()
+                                .addComponent(ButUVa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ButOtro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ButNinguno))
+                            .addGroup(DatosPartLayout.createSequentialGroup()
+                                .addComponent(Fecha)
+                                .addGap(18, 18, 18)
+                                .addComponent(CmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CmbAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
+                        .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(DatosPartLayout.createSequentialGroup()
+                                .addComponent(Sexo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                                .addComponent(ButHombre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ButMujer))
+                            .addComponent(TextNIF, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TextCorreo, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TextAp2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TextNombre, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TextAp1, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(18, 18, 18)
+                        .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
+                                .addComponent(Volver)
+                                .addGap(18, 18, 18)
+                                .addComponent(Continuar)
+                                .addContainerGap())
+                            .addComponent(RellenarChk)))))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        DatosPartLayout.setVerticalGroup(
+            DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DatosPartLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RellenarChk))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TextAp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TextAp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TextCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TextNIF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButHombre)
+                    .addComponent(ButMujer)
+                    .addComponent(Sexo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Fecha)
+                    .addComponent(CmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CmbAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Centro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButUVa)
+                    .addComponent(ButOtro)
+                    .addComponent(ButNinguno))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
+                .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Continuar)
+                    .addComponent(Volver)))
         );
+
+        getContentPane().add(DatosPart, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public String[] creaFechas(){
+        String[] fechas = new String [99];
+        for (int i=0; i<=98; i++){
+            fechas[98-i]= Integer.toString(i+1900);
+        }
+        return fechas;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -79,5 +232,27 @@ public class DatosV extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton ButHombre;
+    private javax.swing.JRadioButton ButMujer;
+    private javax.swing.JRadioButton ButNinguno;
+    private javax.swing.JRadioButton ButOtro;
+    private javax.swing.JRadioButton ButUVa;
+    private javax.swing.JLabel Centro;
+    private javax.swing.JComboBox<String> CmbAno;
+    private javax.swing.JComboBox<String> CmbDia;
+    private javax.swing.JComboBox<String> CmbMes;
+    private javax.swing.JButton Continuar;
+    private javax.swing.JPanel DatosPart;
+    private javax.swing.JLabel Fecha;
+    private javax.swing.ButtonGroup GroupCentro;
+    private javax.swing.ButtonGroup GroupSexo;
+    private javax.swing.JCheckBox RellenarChk;
+    private javax.swing.JLabel Sexo;
+    private javax.swing.JTextField TextAp1;
+    private javax.swing.JTextField TextAp2;
+    private javax.swing.JTextField TextCorreo;
+    private javax.swing.JTextField TextNIF;
+    private javax.swing.JTextField TextNombre;
+    private javax.swing.JButton Volver;
     // End of variables declaration//GEN-END:variables
 }
