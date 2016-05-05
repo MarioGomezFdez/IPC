@@ -49,6 +49,8 @@ public class DatosV extends javax.swing.JFrame {
         CmbDia = new javax.swing.JComboBox<>();
         CmbMes = new javax.swing.JComboBox<>();
         CmbAno = new javax.swing.JComboBox<>();
+        OtraUni = new javax.swing.JPanel();
+        TextOtraUni = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,8 +65,14 @@ public class DatosV extends javax.swing.JFrame {
         TextCorreo.setText("Correo");
 
         TextNIF.setText("NIF");
+        TextNIF.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         RellenarChk.setText("Rellenar con datos del solicitante");
+        RellenarChk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RellenarChkActionPerformed(evt);
+            }
+        });
 
         GroupSexo.add(ButHombre);
         ButHombre.setText("Hombre");
@@ -75,13 +83,29 @@ public class DatosV extends javax.swing.JFrame {
         Centro.setText("Centro del que procede");
 
         GroupCentro.add(ButUVa);
+        ButUVa.setSelected(true);
         ButUVa.setText("UVa");
+        ButUVa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButUVaActionPerformed(evt);
+            }
+        });
 
         GroupCentro.add(ButOtro);
         ButOtro.setText("Otro");
+        ButOtro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButOtroActionPerformed(evt);
+            }
+        });
 
         GroupCentro.add(ButNinguno);
         ButNinguno.setText("Ninguno");
+        ButNinguno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButNingunoActionPerformed(evt);
+            }
+        });
 
         Sexo.setText("Sexo");
 
@@ -97,6 +121,11 @@ public class DatosV extends javax.swing.JFrame {
 
         CmbAno.setModel(new javax.swing.DefaultComboBoxModel<>(creaFechas()));
 
+        OtraUni.setLayout(new java.awt.BorderLayout());
+        OtraUni.add(TextOtraUni, java.awt.BorderLayout.CENTER);
+
+        OtraUni.setVisible(false);
+
         javax.swing.GroupLayout DatosPartLayout = new javax.swing.GroupLayout(DatosPart);
         DatosPart.setLayout(DatosPartLayout);
         DatosPartLayout.setHorizontalGroup(
@@ -106,43 +135,45 @@ public class DatosV extends javax.swing.JFrame {
                 .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DatosPartLayout.createSequentialGroup()
                         .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Centro)
-                            .addGroup(DatosPartLayout.createSequentialGroup()
-                                .addComponent(ButUVa)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
+                                .addComponent(Sexo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addComponent(ButHombre)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ButOtro)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ButNinguno))
+                                .addComponent(ButMujer))
+                            .addComponent(TextNIF)
+                            .addComponent(TextCorreo)
+                            .addComponent(TextAp2)
+                            .addComponent(TextNombre)
+                            .addComponent(TextAp1)
+                            .addComponent(Centro))
+                        .addGap(18, 18, 18)
+                        .addComponent(RellenarChk)
+                        .addContainerGap())
+                    .addGroup(DatosPartLayout.createSequentialGroup()
+                        .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(DatosPartLayout.createSequentialGroup()
                                 .addComponent(Fecha)
                                 .addGap(18, 18, 18)
                                 .addComponent(CmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CmbAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
-                        .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(CmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(DatosPartLayout.createSequentialGroup()
-                                .addComponent(Sexo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                                .addComponent(ButHombre)
+                                .addComponent(ButUVa)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ButMujer))
-                            .addComponent(TextNIF, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextCorreo, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextAp2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextNombre, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextAp1, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(18, 18, 18)
+                                .addComponent(ButNinguno)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ButOtro)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
-                                .addComponent(Volver)
-                                .addGap(18, 18, 18)
-                                .addComponent(Continuar)
-                                .addContainerGap())
-                            .addComponent(RellenarChk)))))
+                            .addComponent(CmbAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(OtraUni, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Volver)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Continuar)
+                .addContainerGap())
         );
         DatosPartLayout.setVerticalGroup(
             DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,14 +201,15 @@ public class DatosV extends javax.swing.JFrame {
                     .addComponent(CmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CmbAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(17, 17, 17)
                 .addComponent(Centro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButUVa)
                     .addComponent(ButOtro)
-                    .addComponent(ButNinguno))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
+                    .addComponent(ButNinguno)
+                    .addComponent(OtraUni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Continuar)
                     .addComponent(Volver)))
@@ -188,12 +220,46 @@ public class DatosV extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void RellenarChkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RellenarChkActionPerformed
+        if (RellenarChk.isSelected()){
+            TextNombre.setEnabled(false);
+            TextAp1.setEnabled(false);
+            TextAp2.setEnabled(false);
+            TextCorreo.setEnabled(false);
+        }else{
+            TextNombre.setEnabled(true);
+            TextAp1.setEnabled(true);
+            TextAp2.setEnabled(true);
+            TextCorreo.setEnabled(true);
+        }
+    }//GEN-LAST:event_RellenarChkActionPerformed
+
+    private void ButOtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButOtroActionPerformed
+        OtraUniVisible();
+    }//GEN-LAST:event_ButOtroActionPerformed
+
+    private void ButNingunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButNingunoActionPerformed
+        OtraUniVisible();
+    }//GEN-LAST:event_ButNingunoActionPerformed
+
+    private void ButUVaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButUVaActionPerformed
+        OtraUniVisible();
+    }//GEN-LAST:event_ButUVaActionPerformed
+
     public String[] creaFechas(){
         String[] fechas = new String [99];
         for (int i=0; i<=98; i++){
             fechas[98-i]= Integer.toString(i+1900);
         }
         return fechas;
+    }
+    
+    public void OtraUniVisible (){
+        if (ButOtro.isSelected()){
+            OtraUni.setVisible(true);
+        } else {
+            OtraUni.setVisible(false);
+        }
     }
     
     /**
@@ -246,6 +312,7 @@ public class DatosV extends javax.swing.JFrame {
     private javax.swing.JLabel Fecha;
     private javax.swing.ButtonGroup GroupCentro;
     private javax.swing.ButtonGroup GroupSexo;
+    private javax.swing.JPanel OtraUni;
     private javax.swing.JCheckBox RellenarChk;
     private javax.swing.JLabel Sexo;
     private javax.swing.JTextField TextAp1;
@@ -253,6 +320,7 @@ public class DatosV extends javax.swing.JFrame {
     private javax.swing.JTextField TextCorreo;
     private javax.swing.JTextField TextNIF;
     private javax.swing.JTextField TextNombre;
+    private javax.swing.JTextField TextOtraUni;
     private javax.swing.JButton Volver;
     // End of variables declaration//GEN-END:variables
 }
