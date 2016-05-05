@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Categoria.ui;
 import java.awt.Color;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SpinnerModel;
@@ -75,10 +74,25 @@ public class CategoriaV extends javax.swing.JFrame {
         });
 
         AbsolutaSex_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        AbsolutaSex_spn.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                AbsolutaSex_spnStateChanged(evt);
+            }
+        });
 
         Alumnos_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Alumnos_spn.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Alumnos_spnStateChanged(evt);
+            }
+        });
 
         Profesores_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Profesores_spn.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Profesores_spnStateChanged(evt);
+            }
+        });
 
         Nota.setText("<html><font color='red'>Nota</font>: un solicitante solo puede pedir 5 participaciones en total</html>");
 
@@ -310,10 +324,22 @@ public class CategoriaV extends javax.swing.JFrame {
     private void Absoluta_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Absoluta_spnStateChanged
         Comprobar();
     }//GEN-LAST:event_Absoluta_spnStateChanged
-  private SpinnerModel Spinners (int max) {
-      SpinnerModel model = new SpinnerNumberModel(max,0,max,1);
-      SpinnerModel model1 = new SpinnerNumberModel(0,0,max,1);
-      if (max!=5) return model;else {
+
+    private void AbsolutaSex_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_AbsolutaSex_spnStateChanged
+        Comprobar();
+    }//GEN-LAST:event_AbsolutaSex_spnStateChanged
+
+    private void Alumnos_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Alumnos_spnStateChanged
+        Comprobar();
+    }//GEN-LAST:event_Alumnos_spnStateChanged
+
+    private void Profesores_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Profesores_spnStateChanged
+        Comprobar();
+    }//GEN-LAST:event_Profesores_spnStateChanged
+  private SpinnerModel Spinners (int num, int flag) {
+      SpinnerModel model = new SpinnerNumberModel(num,0,num,1);
+      SpinnerModel model1 = new SpinnerNumberModel(num,0,5,1);
+      if (flag!=1) return model;else {
           return model1;
         }
   } 
@@ -328,21 +354,16 @@ public class CategoriaV extends javax.swing.JFrame {
      if ((a+b+c+d)>5)   {
          System.out.println("Vaia");
          System.out.print(a+b+c+d);
-         Absoluta_spn.setModel(Spinners(a));
-         AbsolutaSex_spn.setModel(Spinners(b));
-         /*
-         AbsolutaSex_spn.setModel(Spinners(b));
-         Alumnos_spn.setModel(Spinners(c));
-         Profesores_spn.setModel(Spinners(d));    
-         */
+         //Al parecer hay que usar esto
+         Absoluta_spn.setModel(Spinners(a,0));
+         AbsolutaSex_spn.setModel(Spinners(b,0));
+         Alumnos_spn.setModel(Spinners(c,0));
+         Profesores_spn.setModel(Spinners(d,0));    
      }else{ 
-         Absoluta_spn.setModel(Spinners(5));
-         AbsolutaSex_spn.setModel(Spinners(5));
-         /*
-         AbsolutaSex_spn.setModel(Spinners(5));
-         Alumnos_spn.setModel(Spinners(5));
-         Profesores_spn.setModel(Spinners(5)); 
-       */
+         Absoluta_spn.setModel(Spinners(a,1));
+         AbsolutaSex_spn.setModel(Spinners(b,1));
+         Alumnos_spn.setModel(Spinners(c,1));
+         Profesores_spn.setModel(Spinners(d,1)); 
      }
   }
     
