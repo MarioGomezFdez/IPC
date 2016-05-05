@@ -25,18 +25,16 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanel2" max="32767" attributes="0"/>
-                  <Component id="jPanel1" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="Salir" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Continuar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jPanel1" max="32767" attributes="0"/>
+                  <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,7 +88,7 @@
                       </Group>
                       <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="93" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -129,17 +127,11 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Absoluta"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="jCheckBox2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Absoluta por sexo"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="jCheckBox3">
           <Properties>
@@ -204,32 +196,20 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="Nombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Ap1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Ap2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Correo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Ap1_text" pref="255" max="32767" attributes="0"/>
+                              <Component id="Nombre_text" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="Nombre_text" max="32767" attributes="0"/>
-                                      <Component id="Ap1_text" pref="255" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="Correo_text" pref="255" max="32767" attributes="0"/>
-                                      <Component id="Ap2_text" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="Asterisco" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="Correo_text" max="32767" attributes="0"/>
+                                  <Component id="Ap2_text" pref="255" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="Asterisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -242,63 +222,25 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="Asterisco" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Nombre_text" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="Nombre_text" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Ap1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Ap1_text" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="Ap1_text" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Ap2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Ap2_text" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="Ap2_text" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Correo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="Correo_text" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="Correo_text" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="Nombre">
-          <Properties>
-            <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="Nombre_text"/>
-            </Property>
-            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;Nombre&lt;font color=&apos;red&apos;&gt;*&lt;/font&gt;&lt;/html&gt;&quot;" type="code"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Ap1">
-          <Properties>
-            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;Primer Apellido&lt;font color=&apos;red&apos;&gt;*&lt;/font&gt;&lt;/html&gt;&quot;" type="code"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Ap2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Segundo Apellido"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Correo">
-          <Properties>
-            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;Correo&lt;font color=&apos;red&apos;&gt;*&lt;/font&gt;&lt;/html&gt;&quot;" type="code"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="Nombre_text">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre"/>
+            <Property name="text" type="java.lang.String" value="Nombre*"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="Continuar"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Nombre_textFocusGained"/>
@@ -308,20 +250,39 @@
         </Component>
         <Component class="javax.swing.JTextField" name="Ap1_text">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Primer Apellido"/>
+            <Property name="text" type="java.lang.String" value="Primer apellido*"/>
           </Properties>
           <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Ap1_textFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Ap1_textFocusLost"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Ap1_textActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Ap2_text">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Segundo apellido"/>
+          </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Ap2_textFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Ap2_textFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Correo_text">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Correo*"/>
+          </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Correo_textFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Correo_textFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Asterisco">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;font color=&apos;red&apos;&gt;*&lt;/font&gt;Los campos marcados son obligatorios&lt;/html&gt;&quot;" type="code"/>
+            </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="Continuar"/>
             </Property>
           </Properties>
         </Component>

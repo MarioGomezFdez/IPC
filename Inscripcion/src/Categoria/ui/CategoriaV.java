@@ -16,6 +16,7 @@ public class CategoriaV extends javax.swing.JFrame {
      */
     public CategoriaV() {
         initComponents();
+        Continuar.requestFocus();
     }
 
     /**
@@ -38,10 +39,6 @@ public class CategoriaV extends javax.swing.JFrame {
         jSpinner5 = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        Nombre = new javax.swing.JLabel();
-        Ap1 = new javax.swing.JLabel();
-        Ap2 = new javax.swing.JLabel();
-        Correo = new javax.swing.JLabel();
         Nombre_text = new javax.swing.JTextField();
         Ap1_text = new javax.swing.JTextField();
         Ap2_text = new javax.swing.JTextField();
@@ -56,18 +53,8 @@ public class CategoriaV extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Categoria"));
 
         jCheckBox1.setText("Absoluta");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
 
         jCheckBox2.setText("Absoluta por sexo");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
 
         jCheckBox3.setText("Alumnos");
 
@@ -103,7 +90,7 @@ public class CategoriaV extends javax.swing.JFrame {
                             .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,16 +118,8 @@ public class CategoriaV extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Solicitante"));
 
-        Nombre.setLabelFor(Nombre_text);
-        Nombre.setText("<html>Nombre<font color='red'>*</font></html>");
-
-        Ap1.setText("<html>Primer Apellido<font color='red'>*</font></html>");
-
-        Ap2.setText("Segundo Apellido");
-
-        Correo.setText("<html>Correo<font color='red'>*</font></html>");
-
-        Nombre_text.setText("Nombre");
+        Nombre_text.setText("Nombre*");
+        Nombre_text.setNextFocusableComponent(Continuar);
         Nombre_text.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 Nombre_textFocusGained(evt);
@@ -155,14 +134,43 @@ public class CategoriaV extends javax.swing.JFrame {
             }
         });
 
-        Ap1_text.setText("Primer Apellido");
+        Ap1_text.setText("Primer apellido*");
+        Ap1_text.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Ap1_textFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Ap1_textFocusLost(evt);
+            }
+        });
         Ap1_text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ap1_textActionPerformed(evt);
             }
         });
 
+        Ap2_text.setText("Segundo apellido");
+        Ap2_text.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Ap2_textFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Ap2_textFocusLost(evt);
+            }
+        });
+
+        Correo_text.setText("Correo*");
+        Correo_text.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Correo_textFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Correo_textFocusLost(evt);
+            }
+        });
+
         Asterisco.setText("<html><font color='red'>*</font>Los campos marcados son obligatorios</html>");
+        Asterisco.setNextFocusableComponent(Continuar);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -172,25 +180,16 @@ public class CategoriaV extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Nombre)
-                            .addComponent(Ap1)
-                            .addComponent(Ap2)
-                            .addComponent(Correo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Nombre_text)
-                                    .addComponent(Ap1_text, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(Correo_text, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
-                                    .addComponent(Ap2_text))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Ap1_text, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                            .addComponent(Nombre_text))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(Asterisco)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(Correo_text)
+                                .addComponent(Ap2_text, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE))
+                            .addComponent(Asterisco))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -199,21 +198,13 @@ public class CategoriaV extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(Asterisco)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Nombre)
-                    .addComponent(Nombre_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Nombre_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ap1)
-                    .addComponent(Ap1_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Ap1_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ap2)
-                    .addComponent(Ap2_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Ap2_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Correo)
-                    .addComponent(Correo_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Correo_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -226,16 +217,14 @@ public class CategoriaV extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(Salir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Continuar)
-                        .addGap(11, 11, 11)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(Continuar))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,36 +243,66 @@ public class CategoriaV extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void Nombre_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Nombre_textActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Nombre_textActionPerformed
-
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
-    private void Ap1_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ap1_textActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Ap1_textActionPerformed
-
     private void Nombre_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusGained
-        //Aqui que cuando se pulse sobre el Jtextbox se ponga en blanco
-        if(Nombre_text.getText().equals("Nombre")){
-       
+    
+        if(Nombre_text.getText().equals("Nombre*")){
              Nombre_text.setText("");
         }
     }//GEN-LAST:event_Nombre_textFocusGained
 
     private void Nombre_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusLost
        if(Nombre_text.getText().equals("")){
-        Nombre_text.setText("Nombre");
-       }
+            Nombre_text.setText("Nombre*");
+      }
     }//GEN-LAST:event_Nombre_textFocusLost
 
+    private void Ap1_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusGained
+        if(Ap1_text.getText().equals("Primer apellido*")){
+             Ap1_text.setText("");
+        }
+    }//GEN-LAST:event_Ap1_textFocusGained
+
+    private void Ap1_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusLost
+        if(Ap1_text.getText().equals("")){
+            Ap1_text.setText("Primer apellido*");
+       }
+    }//GEN-LAST:event_Ap1_textFocusLost
+
+    private void Ap2_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusGained
+        if(Ap2_text.getText().equals("Segundo apellido")){
+             Ap2_text.setText("");
+        }
+    }//GEN-LAST:event_Ap2_textFocusGained
+
+    private void Ap2_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusLost
+          if(Ap2_text.getText().equals("")){
+            Ap2_text.setText("Segundo apellido");
+       }
+    }//GEN-LAST:event_Ap2_textFocusLost
+
+    private void Correo_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusGained
+        if(Correo_text.getText().equals("Correo*")){
+             Correo_text.setText("");
+        }
+    }//GEN-LAST:event_Correo_textFocusGained
+
+    private void Correo_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusLost
+           if(Correo_text.getText().equals("")){
+        Correo_text.setText("Correo*");
+       }
+    }//GEN-LAST:event_Correo_textFocusLost
+
+    private void Nombre_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Nombre_textActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Nombre_textActionPerformed
+
+    private void Ap1_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ap1_textActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Ap1_textActionPerformed
+
+  
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -314,21 +333,18 @@ public class CategoriaV extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new CategoriaV().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Ap1;
     private javax.swing.JTextField Ap1_text;
-    private javax.swing.JLabel Ap2;
     private javax.swing.JTextField Ap2_text;
     private javax.swing.JLabel Asterisco;
     private javax.swing.JButton Continuar;
-    private javax.swing.JLabel Correo;
     private javax.swing.JTextField Correo_text;
-    private javax.swing.JLabel Nombre;
     private javax.swing.JTextField Nombre_text;
     private javax.swing.JButton Salir;
     private javax.swing.JCheckBox jCheckBox1;
