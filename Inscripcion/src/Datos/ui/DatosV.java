@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Datos.ui;
+import java.awt.Color;
 
 /**
  *
@@ -57,6 +58,14 @@ public class DatosV extends javax.swing.JFrame {
         DatosPart.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Participante"));
 
         TextNombre.setText("Nombre");
+        TextNombre.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TextNombreFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TextNombreFocusLost(evt);
+            }
+        });
 
         TextAp1.setText("Ap1");
 
@@ -137,7 +146,7 @@ public class DatosV extends javax.swing.JFrame {
                         .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
                                 .addComponent(Sexo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(ButHombre)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(ButMujer))
@@ -209,7 +218,7 @@ public class DatosV extends javax.swing.JFrame {
                     .addComponent(ButOtro)
                     .addComponent(ButNinguno)
                     .addComponent(OtraUni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Continuar)
                     .addComponent(Volver)))
@@ -245,6 +254,23 @@ public class DatosV extends javax.swing.JFrame {
     private void ButUVaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButUVaActionPerformed
         OtraUniVisible();
     }//GEN-LAST:event_ButUVaActionPerformed
+
+    private void TextNombreFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNombreFocusGained
+       TextNombre.setForeground(Color.BLACK);
+        if(TextNombre.getText().equals("Nombre")){
+             TextNombre.setText("");
+        }
+    }//GEN-LAST:event_TextNombreFocusGained
+
+    private void TextNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNombreFocusLost
+        if(TextNombre.getText().equals("")){
+
+            TextNombre.setText("Nombre");
+          TextNombre.setForeground(Color.GRAY);
+      }
+        
+        
+    }//GEN-LAST:event_TextNombreFocusLost
 
     public String[] creaFechas(){
         String[] fechas = new String [99];

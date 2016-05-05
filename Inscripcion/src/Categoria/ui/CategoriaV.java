@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Categoria.ui;
 import java.awt.Color;
 import javax.swing.UIManager;
 /**
@@ -256,8 +257,6 @@ public class CategoriaV extends javax.swing.JFrame {
 
             Nombre_text.setText("Nombre*");
             Nombre_text.setForeground(Color.GRAY);
-            
-            
       }
     }//GEN-LAST:event_Nombre_textFocusLost
 
