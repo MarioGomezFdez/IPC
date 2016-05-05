@@ -319,15 +319,28 @@ public class CategoriaV extends javax.swing.JFrame {
         
         if(((Nombre_text.getText().equals("Nombre*"))||(Nombre_text.getText().equals("")))||((Ap1_text.getText().equals("Ap1*"))||(Ap1_text.getText().equals("")))||((Correo_text.getText().equals("Correo*"))||(Correo_text.getText().equals("")))){
           Asterisco.setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
-        }
-        
-        
+        }   
     }//GEN-LAST:event_ContinuarActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         catControl.exit();
     }//GEN-LAST:event_SalirActionPerformed
  
+    public javax.swing.JSpinner getAbsoluta(){
+        return Absoluta_spn;
+    }
+
+    public javax.swing.JSpinner getAbsolutaSex(){
+        return AbsolutaSex_spn;
+    }    
+    
+    public javax.swing.JSpinner getAlumnos(){
+        return Alumnos_spn;
+    }
+    
+    public javax.swing.JSpinner getProfesores(){
+        return Profesores_spn;
+    }
     /**
      * @param args the command line arguments
      */
