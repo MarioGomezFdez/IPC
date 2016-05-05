@@ -26,11 +26,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="Salir" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Continuar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Component id="jPanel1" max="32767" attributes="0"/>
                   <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
@@ -73,20 +75,20 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Absoluta_chk" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Alumnos_chk" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Profesores_chk" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="AbsolutaSex_chk" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jSpinner4" min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="jSpinner5" min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="jSpinner2" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="jSpinner1" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="Alumnos_spn" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="Profesores_spn" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="AbsolutaSex_spn" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="Absoluta_spn" min="-2" pref="41" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Nota" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="93" max="32767" attributes="0"/>
               </Group>
@@ -96,26 +98,26 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="Nota" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jSpinner1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="Absoluta_chk" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="Absoluta_spn" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox2" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jSpinner2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="AbsolutaSex_chk" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="AbsolutaSex_spn" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox3" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jSpinner4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="Alumnos_chk" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="Alumnos_spn" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox4" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jSpinner5" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="Profesores_chk" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="Profesores_spn" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="29" max="32767" attributes="0"/>
               </Group>
@@ -123,55 +125,58 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="Absoluta_chk">
           <Properties>
             <Property name="text" type="java.lang.String" value="Absoluta"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+        <Component class="javax.swing.JCheckBox" name="AbsolutaSex_chk">
           <Properties>
             <Property name="text" type="java.lang.String" value="Absoluta por sexo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+        <Component class="javax.swing.JCheckBox" name="Alumnos_chk">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alumnos"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+        <Component class="javax.swing.JCheckBox" name="Profesores_chk">
           <Properties>
             <Property name="text" type="java.lang.String" value="Profesores"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner1">
+        <Component class="javax.swing.JSpinner" name="Absoluta_spn">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Absoluta_spnStateChanged"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="AbsolutaSex_spn">
           <Properties>
             <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
               <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner2">
+        <Component class="javax.swing.JSpinner" name="Alumnos_spn">
           <Properties>
             <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
               <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner4">
+        <Component class="javax.swing.JSpinner" name="Profesores_spn">
           <Properties>
             <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
               <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner5">
-          <Properties>
-            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-              <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="Nota">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;&lt;font color=&apos;red&apos;&gt;Nota&lt;/font&gt;: un solicitante solo puede pedir 5 participaciones en total&lt;/html&gt;&quot;" type="code"/>
@@ -245,7 +250,6 @@
           <Events>
             <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Nombre_textFocusGained"/>
             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Nombre_textFocusLost"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Nombre_textActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Ap1_text">
@@ -255,7 +259,6 @@
           <Events>
             <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Ap1_textFocusGained"/>
             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="Ap1_textFocusLost"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Ap1_textActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Ap2_text">

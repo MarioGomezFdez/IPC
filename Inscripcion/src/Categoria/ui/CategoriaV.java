@@ -5,6 +5,9 @@
  */
 package Categoria.ui;
 import java.awt.Color;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.SpinnerModel;
+import javax.swing.UIManager;
 /**
  *
  * @author Mario
@@ -16,6 +19,10 @@ public class CategoriaV extends javax.swing.JFrame {
      */
     public CategoriaV() {
         initComponents();
+        Nombre_text.setForeground(Color.GRAY);
+        Ap1_text.setForeground(Color.GRAY);
+        Ap2_text.setForeground(Color.GRAY);
+        Correo_text.setForeground(Color.GRAY);
         Continuar.requestFocus();
     }
 
@@ -29,15 +36,15 @@ public class CategoriaV extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jSpinner1 = new javax.swing.JSpinner();
-        jSpinner2 = new javax.swing.JSpinner();
-        jSpinner4 = new javax.swing.JSpinner();
-        jSpinner5 = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
+        Absoluta_chk = new javax.swing.JCheckBox();
+        AbsolutaSex_chk = new javax.swing.JCheckBox();
+        Alumnos_chk = new javax.swing.JCheckBox();
+        Profesores_chk = new javax.swing.JCheckBox();
+        Absoluta_spn = new javax.swing.JSpinner();
+        AbsolutaSex_spn = new javax.swing.JSpinner();
+        Alumnos_spn = new javax.swing.JSpinner();
+        Profesores_spn = new javax.swing.JSpinner();
+        Nota = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Nombre_text = new javax.swing.JTextField();
         Ap1_text = new javax.swing.JTextField();
@@ -52,23 +59,28 @@ public class CategoriaV extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Categoria"));
 
-        jCheckBox1.setText("Absoluta");
+        Absoluta_chk.setText("Absoluta");
 
-        jCheckBox2.setText("Absoluta por sexo");
+        AbsolutaSex_chk.setText("Absoluta por sexo");
 
-        jCheckBox3.setText("Alumnos");
+        Alumnos_chk.setText("Alumnos");
 
-        jCheckBox4.setText("Profesores");
+        Profesores_chk.setText("Profesores");
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Absoluta_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Absoluta_spn.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Absoluta_spnStateChanged(evt);
+            }
+        });
 
-        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        AbsolutaSex_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
 
-        jSpinner4.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Alumnos_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
 
-        jSpinner5.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Profesores_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
 
-        jLabel1.setText("<html><font color='red'>Nota</font>: un solicitante solo puede pedir 5 participaciones en total</html>");
+        Nota.setText("<html><font color='red'>Nota</font>: un solicitante solo puede pedir 5 participaciones en total</html>");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -79,40 +91,40 @@ public class CategoriaV extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
-                            .addComponent(jCheckBox3)
-                            .addComponent(jCheckBox4)
-                            .addComponent(jCheckBox2))
+                            .addComponent(Absoluta_chk)
+                            .addComponent(Alumnos_chk)
+                            .addComponent(Profesores_chk)
+                            .addComponent(AbsolutaSex_chk))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel1))
+                            .addComponent(Alumnos_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Profesores_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AbsolutaSex_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Absoluta_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Nota))
                 .addContainerGap(93, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(Nota)
                 .addGap(8, 8, 8)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Absoluta_chk, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Absoluta_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1, 1, 1)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AbsolutaSex_chk, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AbsolutaSex_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Alumnos_chk, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Alumnos_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Profesores_chk, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Profesores_spn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -128,11 +140,6 @@ public class CategoriaV extends javax.swing.JFrame {
                 Nombre_textFocusLost(evt);
             }
         });
-        Nombre_text.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Nombre_textActionPerformed(evt);
-            }
-        });
 
         Ap1_text.setText("Primer apellido*");
         Ap1_text.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -141,11 +148,6 @@ public class CategoriaV extends javax.swing.JFrame {
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 Ap1_textFocusLost(evt);
-            }
-        });
-        Ap1_text.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ap1_textActionPerformed(evt);
             }
         });
 
@@ -218,11 +220,13 @@ public class CategoriaV extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(Salir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Continuar))
+                        .addComponent(Continuar)
+                        .addContainerGap())
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
@@ -261,6 +265,7 @@ public class CategoriaV extends javax.swing.JFrame {
     }//GEN-LAST:event_Nombre_textFocusLost
 
     private void Ap1_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusGained
+        Ap1_text.setForeground(Color.BLACK);
         if(Ap1_text.getText().equals("Primer apellido*")){
              Ap1_text.setText("");
         }
@@ -269,22 +274,27 @@ public class CategoriaV extends javax.swing.JFrame {
     private void Ap1_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusLost
         if(Ap1_text.getText().equals("")){
             Ap1_text.setText("Primer apellido*");
+            Ap1_text.setForeground(Color.GRAY);
        }
     }//GEN-LAST:event_Ap1_textFocusLost
 
     private void Ap2_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusGained
+        Ap2_text.setForeground(Color.BLACK);
         if(Ap2_text.getText().equals("Segundo apellido")){
              Ap2_text.setText("");
         }
     }//GEN-LAST:event_Ap2_textFocusGained
 
     private void Ap2_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusLost
-          if(Ap2_text.getText().equals("")){
+     
+        if(Ap2_text.getText().equals("")){
             Ap2_text.setText("Segundo apellido");
+               Ap2_text.setForeground(Color.GRAY);
        }
     }//GEN-LAST:event_Ap2_textFocusLost
 
     private void Correo_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusGained
+        Correo_text.setForeground(Color.BLACK);
         if(Correo_text.getText().equals("Correo*")){
              Correo_text.setText("");
         }
@@ -293,18 +303,48 @@ public class CategoriaV extends javax.swing.JFrame {
     private void Correo_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusLost
            if(Correo_text.getText().equals("")){
         Correo_text.setText("Correo*");
+        Correo_text.setForeground(Color.GRAY);
        }
     }//GEN-LAST:event_Correo_textFocusLost
 
-    private void Nombre_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Nombre_textActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Nombre_textActionPerformed
-
-    private void Ap1_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ap1_textActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Ap1_textActionPerformed
-
-  
+    private void Absoluta_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Absoluta_spnStateChanged
+        Comprobar();
+    }//GEN-LAST:event_Absoluta_spnStateChanged
+  private SpinnerModel Spinners (int max) {
+      SpinnerModel model = new SpinnerNumberModel(max,0,max,1);
+      SpinnerModel model1 = new SpinnerNumberModel(0,0,max,1);
+      if (max!=5) return model;else {
+          return model1;
+        }
+  } 
+  private void Comprobar(){
+    
+     int a,b,c,d;
+     a = (Integer) Absoluta_spn.getValue();
+     b = (Integer) AbsolutaSex_spn.getValue();
+     c = (Integer) Alumnos_spn.getValue();
+     d = (Integer) Profesores_spn.getValue();
+     
+     if ((a+b+c+d)>5)   {
+         System.out.println("Vaia");
+         System.out.print(a+b+c+d);
+         Absoluta_spn.setModel(Spinners(a));
+         AbsolutaSex_spn.setModel(Spinners(b));
+         /*
+         AbsolutaSex_spn.setModel(Spinners(b));
+         Alumnos_spn.setModel(Spinners(c));
+         Profesores_spn.setModel(Spinners(d));    
+         */
+     }else{ 
+         Absoluta_spn.setModel(Spinners(5));
+         AbsolutaSex_spn.setModel(Spinners(5));
+         /*
+         AbsolutaSex_spn.setModel(Spinners(5));
+         Alumnos_spn.setModel(Spinners(5));
+         Profesores_spn.setModel(Spinners(5)); 
+       */
+     }
+  }
     
     
     /**
@@ -317,12 +357,14 @@ public class CategoriaV extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
+            /*
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                }
-            }
+                }*/
+            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(CategoriaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
@@ -344,23 +386,23 @@ public class CategoriaV extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox AbsolutaSex_chk;
+    private javax.swing.JSpinner AbsolutaSex_spn;
+    private javax.swing.JCheckBox Absoluta_chk;
+    private javax.swing.JSpinner Absoluta_spn;
+    private javax.swing.JCheckBox Alumnos_chk;
+    private javax.swing.JSpinner Alumnos_spn;
     private javax.swing.JTextField Ap1_text;
     private javax.swing.JTextField Ap2_text;
     private javax.swing.JLabel Asterisco;
     private javax.swing.JButton Continuar;
     private javax.swing.JTextField Correo_text;
     private javax.swing.JTextField Nombre_text;
+    private javax.swing.JLabel Nota;
+    private javax.swing.JCheckBox Profesores_chk;
+    private javax.swing.JSpinner Profesores_spn;
     private javax.swing.JButton Salir;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner5;
     // End of variables declaration//GEN-END:variables
 }
