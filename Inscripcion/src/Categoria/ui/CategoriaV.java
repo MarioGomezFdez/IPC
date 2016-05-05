@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Categoria.ui;
-
+import java.awt.Color;
 /**
  *
  * @author Mario
@@ -244,7 +244,7 @@ public class CategoriaV extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Nombre_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusGained
-    
+        Nombre_text.setForeground(Color.BLACK);
         if(Nombre_text.getText().equals("Nombre*")){
              Nombre_text.setText("");
         }
@@ -252,7 +252,11 @@ public class CategoriaV extends javax.swing.JFrame {
 
     private void Nombre_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusLost
        if(Nombre_text.getText().equals("")){
+
             Nombre_text.setText("Nombre*");
+            Nombre_text.setForeground(Color.GRAY);
+            
+            
       }
     }//GEN-LAST:event_Nombre_textFocusLost
 
