@@ -6,7 +6,7 @@
 package Datos.ui;
 
 /**
- *
+ * 
  * @author Mario
  */
 public class DatosC {
