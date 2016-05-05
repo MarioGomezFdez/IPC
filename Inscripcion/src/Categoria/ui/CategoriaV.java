@@ -1,20 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Categoria.ui;
+
 import java.awt.Color;
 import javax.swing.UIManager;
 /**
  *
- * @author Mario
+ * @author Mario Gomez Fernandez
+ * @author Miguel Bayon Sanz
  */
 public class CategoriaV extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CategoriaV
-     */
+    private CategoriaC catControl;
+    
     public CategoriaV() {
         initComponents();
         Nombre_text.setForeground(Color.GRAY);
@@ -22,6 +18,7 @@ public class CategoriaV extends javax.swing.JFrame {
         Ap2_text.setForeground(Color.GRAY);
         Correo_text.setForeground(Color.GRAY);
         Continuar.requestFocus();
+        catControl = new CategoriaC (this);
     }
 
     /**
@@ -204,6 +201,11 @@ public class CategoriaV extends javax.swing.JFrame {
         );
 
         Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
 
         Continuar.setText("Continuar");
         Continuar.addActionListener(new java.awt.event.ActionListener() {
@@ -321,6 +323,10 @@ public class CategoriaV extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_ContinuarActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        catControl.exit();
+    }//GEN-LAST:event_SalirActionPerformed
  
     /**
      * @param args the command line arguments
