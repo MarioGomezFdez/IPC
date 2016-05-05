@@ -151,9 +151,6 @@
               <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Absoluta_spnStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JSpinner" name="AbsolutaSex_spn">
           <Properties>
@@ -161,9 +158,6 @@
               <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="AbsolutaSex_spnStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JSpinner" name="Alumnos_spn">
           <Properties>
@@ -171,9 +165,6 @@
               <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Alumnos_spnStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JSpinner" name="Profesores_spn">
           <Properties>
@@ -181,9 +172,6 @@
               <SpinnerModel initial="0" maximum="5" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Profesores_spnStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="Nota">
           <Properties>
@@ -309,6 +297,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Continuar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ContinuarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

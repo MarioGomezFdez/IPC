@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 import java.awt.Color;
-import javax.swing.SpinnerNumberModel;
-import javax.swing.SpinnerModel;
 import javax.swing.UIManager;
 /**
  *
@@ -67,32 +65,12 @@ public class CategoriaV extends javax.swing.JFrame {
         Profesores_chk.setText("Profesores");
 
         Absoluta_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
-        Absoluta_spn.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                Absoluta_spnStateChanged(evt);
-            }
-        });
 
         AbsolutaSex_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
-        AbsolutaSex_spn.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                AbsolutaSex_spnStateChanged(evt);
-            }
-        });
 
         Alumnos_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
-        Alumnos_spn.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                Alumnos_spnStateChanged(evt);
-            }
-        });
 
         Profesores_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
-        Profesores_spn.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                Profesores_spnStateChanged(evt);
-            }
-        });
 
         Nota.setText("<html><font color='red'>Nota</font>: un solicitante solo puede pedir 5 participaciones en total</html>");
 
@@ -227,6 +205,11 @@ public class CategoriaV extends javax.swing.JFrame {
         Salir.setText("Salir");
 
         Continuar.setText("Continuar");
+        Continuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContinuarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -321,53 +304,25 @@ public class CategoriaV extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_Correo_textFocusLost
 
-    private void Absoluta_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Absoluta_spnStateChanged
-        Comprobar();
-    }//GEN-LAST:event_Absoluta_spnStateChanged
-
-    private void AbsolutaSex_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_AbsolutaSex_spnStateChanged
-        Comprobar();
-    }//GEN-LAST:event_AbsolutaSex_spnStateChanged
-
-    private void Alumnos_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Alumnos_spnStateChanged
-        Comprobar();
-    }//GEN-LAST:event_Alumnos_spnStateChanged
-
-    private void Profesores_spnStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Profesores_spnStateChanged
-        Comprobar();
-    }//GEN-LAST:event_Profesores_spnStateChanged
-  private SpinnerModel Spinners (int num, int flag) {
-      SpinnerModel model = new SpinnerNumberModel(num,0,num,1);
-      SpinnerModel model1 = new SpinnerNumberModel(num,0,5,1);
-      if (flag!=1) return model;else {
-          return model1;
+    private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
+        int a,b,c,d, total;
+        a = (Integer)Absoluta_spn.getValue();
+        b = (Integer)AbsolutaSex_spn.getValue();
+        c = (Integer)Alumnos_spn.getValue();
+        d = (Integer)Profesores_spn.getValue();
+        total = a+b+c+d;
+        
+        if ((total)>5){
+        Nota.setText("<html><font color='red'>Nota: un solicitante solo puede pedir 5 participaciones en total</font></html>");
         }
-  } 
-  private void Comprobar(){
-    
-     int a,b,c,d;
-     a = (Integer) Absoluta_spn.getValue();
-     b = (Integer) AbsolutaSex_spn.getValue();
-     c = (Integer) Alumnos_spn.getValue();
-     d = (Integer) Profesores_spn.getValue();
-     
-     if ((a+b+c+d)>5)   {
-         System.out.println("Vaia");
-         System.out.print(a+b+c+d);
-         //Al parecer hay que usar esto
-         Absoluta_spn.setModel(Spinners(a,0));
-         AbsolutaSex_spn.setModel(Spinners(b,0));
-         Alumnos_spn.setModel(Spinners(c,0));
-         Profesores_spn.setModel(Spinners(d,0));    
-     }else{ 
-         Absoluta_spn.setModel(Spinners(a,1));
-         AbsolutaSex_spn.setModel(Spinners(b,1));
-         Alumnos_spn.setModel(Spinners(c,1));
-         Profesores_spn.setModel(Spinners(d,1)); 
-     }
-  }
-    
-    
+        
+        if(((Nombre_text.getText().equals("Nombre*"))||(Nombre_text.getText().equals("")))||((Ap1_text.getText().equals("Ap1*"))||(Ap1_text.getText().equals("")))||((Correo_text.getText().equals("Correo*"))||(Correo_text.getText().equals("")))){
+          Asterisco.setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
+        }
+        
+        
+    }//GEN-LAST:event_ContinuarActionPerformed
+ 
     /**
      * @param args the command line arguments
      */
