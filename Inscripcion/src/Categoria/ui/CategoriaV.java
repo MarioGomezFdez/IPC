@@ -15,6 +15,9 @@ public class CategoriaV extends javax.swing.JFrame {
     /**
      * Creates new form CategoriaV
      */
+    
+    CategoriaC catControl;
+    
     public CategoriaV() {
         initComponents();
         Nombre_text.setForeground(Color.GRAY);
@@ -22,6 +25,7 @@ public class CategoriaV extends javax.swing.JFrame {
         Ap2_text.setForeground(Color.GRAY);
         Correo_text.setForeground(Color.GRAY);
         Continuar.requestFocus();
+        catControl = new CategoriaC(this);
     }
 
     /**
@@ -302,23 +306,49 @@ public class CategoriaV extends javax.swing.JFrame {
         Correo_text.setForeground(Color.GRAY);
        }
     }//GEN-LAST:event_Correo_textFocusLost
-
+    public int getAbsoluta_spn(){
+        return (Integer)Absoluta_spn.getValue();
+    }
+     public int getAbsolutaSex_spn(){
+        return (Integer)AbsolutaSex_spn.getValue();
+    } 
+     public int getAlumnos_spn(){
+        return (Integer)Alumnos_spn.getValue();
+    } 
+     public int getProfesores_spn(){
+        return (Integer)Profesores_spn.getValue();
+    }
+     
+     
+     public javax.swing.JLabel getNota(){
+        return Nota;
+     }
+     
+    
+    public javax.swing.JLabel getAsterisco(){
+        return Asterisco;
+     }
+     
+    public javax.swing.JTextField getNombre(){
+        return Nombre_text;
+     }
+    
+    public javax.swing.JTextField getAp1(){
+        return Ap1_text;
+     }
+    
+    public javax.swing.JTextField getCorreo(){
+        return Correo_text;
+     }
+    
+    
+    
+    
+    
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
-        int a,b,c,d, total;
-        a = (Integer)Absoluta_spn.getValue();
-        b = (Integer)AbsolutaSex_spn.getValue();
-        c = (Integer)Alumnos_spn.getValue();
-        d = (Integer)Profesores_spn.getValue();
-        total = a+b+c+d;
-        
-        if ((total)>5){
-        Nota.setText("<html><font color='red'>Nota: un solicitante solo puede pedir 5 participaciones en total</font></html>");
-        }
-        
-        if(((Nombre_text.getText().equals("Nombre*"))||(Nombre_text.getText().equals("")))||((Ap1_text.getText().equals("Ap1*"))||(Ap1_text.getText().equals("")))||((Correo_text.getText().equals("Correo*"))||(Correo_text.getText().equals("")))){
-          Asterisco.setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
-        }
-        
+      if (catControl.validacion()){
+          
+      }
         
     }//GEN-LAST:event_ContinuarActionPerformed
  
