@@ -18,6 +18,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
      */
     public ConfirmacionV() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

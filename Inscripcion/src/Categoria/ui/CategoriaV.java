@@ -20,6 +20,7 @@ public class CategoriaV extends javax.swing.JFrame {
     
     public CategoriaV() {
         initComponents();
+        setLocationRelativeTo(null);
         Nombre_text.setForeground(Color.GRAY);
         Ap1_text.setForeground(Color.GRAY);
         Ap2_text.setForeground(Color.GRAY);

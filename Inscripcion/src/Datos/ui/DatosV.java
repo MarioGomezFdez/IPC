@@ -18,6 +18,7 @@ public class DatosV extends javax.swing.JFrame {
      */
     public DatosV() {
         initComponents();
+        setLocationRelativeTo(null);
         TextNombre.setForeground(Color.GRAY);
         TextAp1.setForeground(Color.GRAY);
         TextAp2.setForeground(Color.GRAY);
