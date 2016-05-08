@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Datos.ui;
- 
+ import Inscripcion.main.Inscripcion;
 /**
  * 
  * @author Mario
@@ -14,5 +14,10 @@ public class DatosC {
     
     public DatosC(DatosV vista) {
         this.vista = vista;
+    }
+    
+    public void abreventanaInscripcion(){
+        
+        Inscripcion.inscripciones();
     }
 }

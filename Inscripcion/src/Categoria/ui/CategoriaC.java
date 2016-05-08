@@ -38,7 +38,6 @@ public class CategoriaC {
     }
 
     public void abreVentanaParticipante() {
-        System.out.println("papadopoudos");
         Inscripcion.participantes();
     }
 

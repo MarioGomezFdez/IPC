@@ -13,7 +13,7 @@ import javax.swing.JFrame;
  */
 public class DatosSM {
 
-    private JFrame ventana;
+    JFrame ventana = new JFrame();
 
     public DatosSM() {
         start();
@@ -27,5 +27,17 @@ public class DatosSM {
             }
         });
     }
+    public void hide() {
+        
+        ventana.setVisible(false);
+    }
+    public void show(){
+        ventana.setVisible(true);
+    }
 
+    public void close() {
+        ventana.setVisible(false);
+        System.exit(0);
+    }
 }
+

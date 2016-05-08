@@ -14,7 +14,7 @@ import javax.swing.UIManager;
  */
 public class DatosV extends javax.swing.JFrame {
 
-    private DatosC controlador;
+    DatosC datControl;
 
     /**
      * Creates new form DatosV
@@ -28,6 +28,7 @@ public class DatosV extends javax.swing.JFrame {
         TextCorreo.setForeground(Color.GRAY);
         TextNIF.setForeground(Color.GRAY);
         Continuar.requestFocus();
+        datControl = new DatosC(this);
     }
 
     /**
@@ -166,6 +167,11 @@ public class DatosV extends javax.swing.JFrame {
         Continuar.setText("Continuar");
 
         Volver.setText("Volver");
+        Volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VolverActionPerformed(evt);
+            }
+        });
 
         Fecha.setText("Fecha de Nacimiento");
 
@@ -380,6 +386,10 @@ public class DatosV extends javax.swing.JFrame {
             TextNIF.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_TextNIFFocusLost
+
+    private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
+        datControl.abreventanaInscripcion();
+    }//GEN-LAST:event_VolverActionPerformed
 
     public String[] creaFechas() {
         String[] fechas = new String[99];

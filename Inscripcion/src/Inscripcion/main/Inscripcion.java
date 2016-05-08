@@ -46,6 +46,11 @@ public class Inscripcion {
         categoriaSM.hide();
         datosSM = new DatosSM();
     }
+    public static void inscripciones (){
+        
+        datosSM.hide();
+        categoriaSM.show();
+    }
 
     public static CategoriaSM getCategoriaSM() {
         return categoriaSM;
