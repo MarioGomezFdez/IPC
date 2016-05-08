@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package Categoria.ui;
+
 import java.awt.Color;
 import javax.swing.UIManager;
+
 /**
  *
  * @author Mario
@@ -15,9 +17,8 @@ public class CategoriaV extends javax.swing.JFrame {
     /**
      * Creates new form CategoriaV
      */
-    
     CategoriaC catControl;
-    
+
     public CategoriaV() {
         initComponents();
         setLocationRelativeTo(null);
@@ -209,6 +210,11 @@ public class CategoriaV extends javax.swing.JFrame {
         );
 
         Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
 
         Continuar.setText("Continuar");
         Continuar.addActionListener(new java.awt.event.ActionListener() {
@@ -252,116 +258,118 @@ public class CategoriaV extends javax.swing.JFrame {
 
     private void Nombre_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusGained
         Nombre_text.setForeground(Color.BLACK);
-        if(Nombre_text.getText().equals("Nombre*")){
-             Nombre_text.setText("");
+        if (Nombre_text.getText().equals("Nombre*")) {
+            Nombre_text.setText("");
         }
     }//GEN-LAST:event_Nombre_textFocusGained
 
     private void Nombre_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusLost
-       if(Nombre_text.getText().equals("")){
+        if (Nombre_text.getText().equals("")) {
 
             Nombre_text.setText("Nombre*");
             Nombre_text.setForeground(Color.GRAY);
-      }
+        }
     }//GEN-LAST:event_Nombre_textFocusLost
 
     private void Ap1_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusGained
         Ap1_text.setForeground(Color.BLACK);
-        if(Ap1_text.getText().equals("Primer apellido*")){
-             Ap1_text.setText("");
+        if (Ap1_text.getText().equals("Primer apellido*")) {
+            Ap1_text.setText("");
         }
     }//GEN-LAST:event_Ap1_textFocusGained
 
     private void Ap1_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusLost
-        if(Ap1_text.getText().equals("")){
+        if (Ap1_text.getText().equals("")) {
             Ap1_text.setText("Primer apellido*");
             Ap1_text.setForeground(Color.GRAY);
-       }
+        }
     }//GEN-LAST:event_Ap1_textFocusLost
 
     private void Ap2_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusGained
         Ap2_text.setForeground(Color.BLACK);
-        if(Ap2_text.getText().equals("Segundo apellido")){
-             Ap2_text.setText("");
+        if (Ap2_text.getText().equals("Segundo apellido")) {
+            Ap2_text.setText("");
         }
     }//GEN-LAST:event_Ap2_textFocusGained
 
     private void Ap2_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusLost
-     
-        if(Ap2_text.getText().equals("")){
+
+        if (Ap2_text.getText().equals("")) {
             Ap2_text.setText("Segundo apellido");
-               Ap2_text.setForeground(Color.GRAY);
-       }
+            Ap2_text.setForeground(Color.GRAY);
+        }
     }//GEN-LAST:event_Ap2_textFocusLost
 
     private void Correo_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusGained
         Correo_text.setForeground(Color.BLACK);
-        if(Correo_text.getText().equals("Correo*")){
-             Correo_text.setText("");
+        if (Correo_text.getText().equals("Correo*")) {
+            Correo_text.setText("");
         }
     }//GEN-LAST:event_Correo_textFocusGained
 
     private void Correo_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusLost
-           if(Correo_text.getText().equals("")){
-        Correo_text.setText("Correo*");
-        Correo_text.setForeground(Color.GRAY);
-       }
+        if (Correo_text.getText().equals("")) {
+            Correo_text.setText("Correo*");
+            Correo_text.setForeground(Color.GRAY);
+        }
     }//GEN-LAST:event_Correo_textFocusLost
-    public int getAbsoluta_spn(){
-        return (Integer)Absoluta_spn.getValue();
+    public int getAbsoluta_spn() {
+        return (Integer) Absoluta_spn.getValue();
     }
-     public int getAbsolutaSex_spn(){
-        return (Integer)AbsolutaSex_spn.getValue();
-    } 
-     public int getAlumnos_spn(){
-        return (Integer)Alumnos_spn.getValue();
-    } 
-     public int getProfesores_spn(){
-        return (Integer)Profesores_spn.getValue();
+
+    public int getAbsolutaSex_spn() {
+        return (Integer) AbsolutaSex_spn.getValue();
     }
-     
-     
-     public javax.swing.JLabel getNota(){
+
+    public int getAlumnos_spn() {
+        return (Integer) Alumnos_spn.getValue();
+    }
+
+    public int getProfesores_spn() {
+        return (Integer) Profesores_spn.getValue();
+    }
+
+    public javax.swing.JLabel getNota() {
         return Nota;
-     }
-     
-    
-    public javax.swing.JLabel getAsterisco(){
+    }
+
+    public javax.swing.JLabel getAsterisco() {
         return Asterisco;
-     }
-     
-    public javax.swing.JTextField getNombre(){
+    }
+
+    public javax.swing.JTextField getNombre() {
         return Nombre_text;
-     }
-    
-    public javax.swing.JTextField getAp1(){
+    }
+
+    public javax.swing.JTextField getAp1() {
         return Ap1_text;
-     }
-    
-    public javax.swing.JTextField getCorreo(){
+    }
+
+    public javax.swing.JTextField getCorreo() {
         return Correo_text;
-     }
-    
-    
-    
-    
-    
+    }
+
+
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
-      if (catControl.validacion()){
-          
-      }
-        
+        if (catControl.validacion()) {
+            catControl.abreVentanaParticipante();
+        }
+
     }//GEN-LAST:event_ContinuarActionPerformed
- 
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        catControl.exit();
+    }//GEN-LAST:event_SalirActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+     *//*
         try {
             
             javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -374,17 +382,17 @@ public class CategoriaV extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(CategoriaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CategoriaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                
-                new CategoriaV().setVisible(true);
-            }
-        });
-    }
+        }*/
+    //</editor-fold>
+//
+//        /* Create and display the form */
+    //       java.awt.EventQueue.invokeLater(new Runnable() {
+    //          public void run() {
+    //             
+    //           new CategoriaV().setVisible(true);
+    //       }
+    //   });
+    // }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox AbsolutaSex_chk;

@@ -4,15 +4,18 @@
  * and open the template in the editor.
  */
 package Datos.ui;
+
 import java.awt.Color;
 import javax.swing.UIManager;
 
 /**
  *
- * @author Mario  
+ * @author Mario
  */
 public class DatosV extends javax.swing.JFrame {
+
     private DatosC controlador;
+
     /**
      * Creates new form DatosV
      */
@@ -62,6 +65,8 @@ public class DatosV extends javax.swing.JFrame {
         TextOtraUni = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inscripcion");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         DatosPart.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Participante"));
 
@@ -279,12 +284,12 @@ public class DatosV extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RellenarChkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RellenarChkActionPerformed
-        if (RellenarChk.isSelected()){
+        if (RellenarChk.isSelected()) {
             TextNombre.setEnabled(false);
             TextAp1.setEnabled(false);
             TextAp2.setEnabled(false);
             TextCorreo.setEnabled(false);
-        }else{
+        } else {
             TextNombre.setEnabled(true);
             TextAp1.setEnabled(true);
             TextAp2.setEnabled(true);
@@ -305,121 +310,91 @@ public class DatosV extends javax.swing.JFrame {
     }//GEN-LAST:event_ButUVaActionPerformed
 
     private void TextNombreFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNombreFocusGained
-       TextNombre.setForeground(Color.BLACK);
-        if(TextNombre.getText().equals("Nombre")){
-             TextNombre.setText("");
+        TextNombre.setForeground(Color.BLACK);
+        if (TextNombre.getText().equals("Nombre")) {
+            TextNombre.setText("");
         }
     }//GEN-LAST:event_TextNombreFocusGained
 
     private void TextNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNombreFocusLost
-        if(TextNombre.getText().equals("")){
+        if (TextNombre.getText().equals("")) {
             TextNombre.setText("Nombre");
-          TextNombre.setForeground(Color.GRAY);
-      }
-        
-        
+            TextNombre.setForeground(Color.GRAY);
+        }
+
+
     }//GEN-LAST:event_TextNombreFocusLost
 
     private void TextAp1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp1FocusGained
         TextAp1.setForeground(Color.BLACK);
-        if(TextAp1.getText().equals("Primer apellido")){
-             TextAp1.setText("");
+        if (TextAp1.getText().equals("Primer apellido")) {
+            TextAp1.setText("");
         }
     }//GEN-LAST:event_TextAp1FocusGained
 
     private void TextAp1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp1FocusLost
-        if(TextAp1.getText().equals("")){
+        if (TextAp1.getText().equals("")) {
             TextAp1.setText("Primer apellido");
             TextAp1.setForeground(Color.GRAY);
-       }
+        }
     }//GEN-LAST:event_TextAp1FocusLost
 
     private void TextAp2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp2FocusGained
         TextAp2.setForeground(Color.BLACK);
-        if(TextAp2.getText().equals("Segundo apellido")){
-             TextAp2.setText("");
+        if (TextAp2.getText().equals("Segundo apellido")) {
+            TextAp2.setText("");
         }
     }//GEN-LAST:event_TextAp2FocusGained
 
     private void TextAp2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp2FocusLost
-        if(TextAp2.getText().equals("")){
+        if (TextAp2.getText().equals("")) {
             TextAp2.setText("Segundo apellido");
-               TextAp2.setForeground(Color.GRAY);
-       }
+            TextAp2.setForeground(Color.GRAY);
+        }
     }//GEN-LAST:event_TextAp2FocusLost
 
     private void TextCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextCorreoFocusGained
         TextCorreo.setForeground(Color.BLACK);
-        if(TextCorreo.getText().equals("Correo")){
-             TextCorreo.setText("");
+        if (TextCorreo.getText().equals("Correo")) {
+            TextCorreo.setText("");
         }
     }//GEN-LAST:event_TextCorreoFocusGained
 
     private void TextCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextCorreoFocusLost
-        if(TextCorreo.getText().equals("")){
-        TextCorreo.setText("Correo");
-        TextCorreo.setForeground(Color.GRAY);
-       }
+        if (TextCorreo.getText().equals("")) {
+            TextCorreo.setText("Correo");
+            TextCorreo.setForeground(Color.GRAY);
+        }
     }//GEN-LAST:event_TextCorreoFocusLost
 
     private void TextNIFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNIFFocusGained
         TextNIF.setForeground(Color.BLACK);
-        if(TextNIF.getText().equals("NIF")){
-             TextNIF.setText("");
+        if (TextNIF.getText().equals("NIF")) {
+            TextNIF.setText("");
         }
     }//GEN-LAST:event_TextNIFFocusGained
 
     private void TextNIFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNIFFocusLost
-        if(TextNIF.getText().equals("")){
-        TextNIF.setText("NIF");
-        TextNIF.setForeground(Color.GRAY);
-       }
+        if (TextNIF.getText().equals("")) {
+            TextNIF.setText("NIF");
+            TextNIF.setForeground(Color.GRAY);
+        }
     }//GEN-LAST:event_TextNIFFocusLost
 
-    public String[] creaFechas(){
-        String[] fechas = new String [99];
-        for (int i=0; i<=98; i++){
-            fechas[98-i]= Integer.toString(i+1900);
+    public String[] creaFechas() {
+        String[] fechas = new String[99];
+        for (int i = 0; i <= 98; i++) {
+            fechas[98 - i] = Integer.toString(i + 1900);
         }
         return fechas;
     }
-    
-    public void OtraUniVisible (){
-        if (ButOtro.isSelected()){
+
+    public void OtraUniVisible() {
+        if (ButOtro.isSelected()) {
             OtraUni.setVisible(true);
         } else {
             OtraUni.setVisible(false);
         }
-    }
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DatosV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DatosV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DatosV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DatosV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DatosV().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
