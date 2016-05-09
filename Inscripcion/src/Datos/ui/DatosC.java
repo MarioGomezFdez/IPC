@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Datos.ui;
- import Inscripcion.main.Inscripcion;
+import Inscripcion.main.Inscripcion;
 /**
  * 
  * @author Mario
@@ -25,7 +25,6 @@ public class DatosC {
      
        
         if (((datVista.getNombre().equals("Nombre*")) || (datVista.getNombre().getText().equals(""))) || ((datVista.getAp1().getText().equals("Primer apellido*")) || (datVista.getAp1().getText().equals(""))) || ((datVista.getCorreo().getText().equals("Correo*")) || (datVista.getCorreo().getText().equals("")))||((datVista.getNIF().equals("NIF*")) || (datVista.getNIF().getText().equals("")))) {
-            System.out.println("holo");
             datVista.getNota().setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
             datosCorrecto = false;
         }
