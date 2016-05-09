@@ -39,7 +39,7 @@ public class CategoriaC {
     }
 
     public void abreVentanaParticipante() {
-        Inscripcion.participantes();
+        Inscripcion.participantes((Integer) catVista.getAbsoluta_spn()+(Integer) catVista.getAbsolutaSex_spn()+(Integer) catVista.getAlumnos_spn()+(Integer) catVista.getProfesores_spn());
     }
 
     public void exit() {

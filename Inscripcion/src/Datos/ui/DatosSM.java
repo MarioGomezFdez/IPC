@@ -13,31 +13,59 @@ import javax.swing.JFrame;
  */
 public class DatosSM {
 
-    JFrame ventana = new JFrame();
+    JFrame[] ventana;
+    int partActual, numParticipantes;
 
-    public DatosSM() {
+    public DatosSM(int numParticipantes) {
+        ventana = new JFrame[numParticipantes];
+        for (int i = 0; i < numParticipantes; i++) {
+            ventana[i] = new JFrame();
+        }
+        this.numParticipantes = numParticipantes;
+        partActual = 0;
         start();
     }
 
     public void start() {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ventana = new DatosV();
-                ventana.setVisible(true);
+                for (int i = 0; i < numParticipantes; i++) {
+                    ventana[i] = new DatosV();
+                }
+                ventana[partActual].setVisible(true);
             }
         });
     }
 
+    public void siguiente() {
+        if (partActual < numParticipantes - 1) {
+            hide();
+            partActual++;
+            show();
+        } else {
+            //ir a confirmacion y ocultar esto 
+        }
+    }
+
+    public void anterior() {
+        if (partActual > 0) {
+            hide();
+            partActual--;
+            show();
+        } else {
+            //ir a categoria y cerrar esto
+        }
+    }
+
     public void hide() {
-        ventana.setVisible(false);
+        ventana[partActual].setVisible(false);
     }
 
     public void show() {
-        ventana.setVisible(true);
+        ventana[partActual].setVisible(true);
     }
 
     public void close() {
-        ventana.setVisible(false);
-        System.exit(0);
+        ventana[partActual].dispose();
     }
 }
