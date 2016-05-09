@@ -64,6 +64,7 @@ public class DatosV extends javax.swing.JFrame {
         CmbAno = new javax.swing.JComboBox<>();
         OtraUni = new javax.swing.JPanel();
         TextOtraUni = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inscripcion");
@@ -71,7 +72,7 @@ public class DatosV extends javax.swing.JFrame {
 
         DatosPart.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Participante"));
 
-        TextNombre.setText("Nombre");
+        TextNombre.setText("Nombre*");
         TextNombre.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 TextNombreFocusGained(evt);
@@ -81,7 +82,7 @@ public class DatosV extends javax.swing.JFrame {
             }
         });
 
-        TextAp1.setText("Primer apellido");
+        TextAp1.setText("Primer apellido*");
         TextAp1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 TextAp1FocusGained(evt);
@@ -101,7 +102,7 @@ public class DatosV extends javax.swing.JFrame {
             }
         });
 
-        TextCorreo.setText("Correo");
+        TextCorreo.setText("Correo*");
         TextCorreo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 TextCorreoFocusGained(evt);
@@ -111,7 +112,7 @@ public class DatosV extends javax.swing.JFrame {
             }
         });
 
-        TextNIF.setText("NIF");
+        TextNIF.setText("NIF*");
         TextNIF.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         TextNIF.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -186,6 +187,8 @@ public class DatosV extends javax.swing.JFrame {
 
         OtraUni.setVisible(false);
 
+        jLabel1.setText("<html><font color='red'>*</font>Campos obligatorios</html>");
+
         javax.swing.GroupLayout DatosPartLayout = new javax.swing.GroupLayout(DatosPart);
         DatosPart.setLayout(DatosPartLayout);
         DatosPartLayout.setHorizontalGroup(
@@ -228,7 +231,9 @@ public class DatosV extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(OtraUni, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
-                        .addComponent(RellenarChk))
+                        .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(RellenarChk)
+                            .addComponent(jLabel1)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(Volver)
@@ -244,7 +249,9 @@ public class DatosV extends javax.swing.JFrame {
                     .addComponent(TextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RellenarChk))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TextAp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TextAp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TextAp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -317,14 +324,14 @@ public class DatosV extends javax.swing.JFrame {
 
     private void TextNombreFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNombreFocusGained
         TextNombre.setForeground(Color.BLACK);
-        if (TextNombre.getText().equals("Nombre")) {
+        if (TextNombre.getText().equals("Nombre*")) {
             TextNombre.setText("");
         }
     }//GEN-LAST:event_TextNombreFocusGained
 
     private void TextNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNombreFocusLost
         if (TextNombre.getText().equals("")) {
-            TextNombre.setText("Nombre");
+            TextNombre.setText("Nombre*");
             TextNombre.setForeground(Color.GRAY);
         }
 
@@ -333,14 +340,14 @@ public class DatosV extends javax.swing.JFrame {
 
     private void TextAp1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp1FocusGained
         TextAp1.setForeground(Color.BLACK);
-        if (TextAp1.getText().equals("Primer apellido")) {
+        if (TextAp1.getText().equals("Primer apellido*")) {
             TextAp1.setText("");
         }
     }//GEN-LAST:event_TextAp1FocusGained
 
     private void TextAp1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextAp1FocusLost
         if (TextAp1.getText().equals("")) {
-            TextAp1.setText("Primer apellido");
+            TextAp1.setText("Primer apellido*");
             TextAp1.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_TextAp1FocusLost
@@ -361,28 +368,28 @@ public class DatosV extends javax.swing.JFrame {
 
     private void TextCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextCorreoFocusGained
         TextCorreo.setForeground(Color.BLACK);
-        if (TextCorreo.getText().equals("Correo")) {
+        if (TextCorreo.getText().equals("Correo*")) {
             TextCorreo.setText("");
         }
     }//GEN-LAST:event_TextCorreoFocusGained
 
     private void TextCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextCorreoFocusLost
         if (TextCorreo.getText().equals("")) {
-            TextCorreo.setText("Correo");
+            TextCorreo.setText("Correo*");
             TextCorreo.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_TextCorreoFocusLost
 
     private void TextNIFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNIFFocusGained
         TextNIF.setForeground(Color.BLACK);
-        if (TextNIF.getText().equals("NIF")) {
+        if (TextNIF.getText().equals("NIF*")) {
             TextNIF.setText("");
         }
     }//GEN-LAST:event_TextNIFFocusGained
 
     private void TextNIFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TextNIFFocusLost
         if (TextNIF.getText().equals("")) {
-            TextNIF.setText("NIF");
+            TextNIF.setText("NIF*");
             TextNIF.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_TextNIFFocusLost
@@ -432,5 +439,6 @@ public class DatosV extends javax.swing.JFrame {
     private javax.swing.JTextField TextNombre;
     private javax.swing.JTextField TextOtraUni;
     private javax.swing.JButton Volver;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
