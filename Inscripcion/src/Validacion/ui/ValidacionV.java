@@ -55,6 +55,11 @@ public class ValidacionV extends javax.swing.JFrame {
         });
 
         Volver.setText("Volver");
+        Volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VolverActionPerformed(evt);
+            }
+        });
 
         NoCuenta.setText("No tengo cuenta");
 
@@ -121,10 +126,11 @@ public class ValidacionV extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(pasarela, "Redirigido a una pasarela de pago segura.");
         valControl.Salir();
         }
-        else{
-        
-    }
     }//GEN-LAST:event_ContinuarActionPerformed
+
+    private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
+        valControl.Volver();
+    }//GEN-LAST:event_VolverActionPerformed
     public boolean getNoCuenta(){
         return NoCuenta.isSelected();
     }

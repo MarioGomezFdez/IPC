@@ -13,12 +13,12 @@ import javax.swing.UIManager;
  */
 public class ConfirmacionV extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ConfirmacionV
-     */
+    ConfirmacionC confC;
+    
     public ConfirmacionV() {
         initComponents();
         setLocationRelativeTo(null);
+        confC = new ConfirmacionC (this);
     }
 
     /**
@@ -78,6 +78,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
         Categoria_5 = new javax.swing.JLabel();
         Centro_5 = new javax.swing.JLabel();
         Pagar = new javax.swing.JButton();
+        Volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Confirmacion");
@@ -398,6 +399,18 @@ public class ConfirmacionV extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jPanel1);
 
         Pagar.setText("Pagar");
+        Pagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PagarActionPerformed(evt);
+            }
+        });
+
+        Volver.setText("Volver");
+        Volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -405,6 +418,8 @@ public class ConfirmacionV extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Volver)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Pagar)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
@@ -416,11 +431,21 @@ public class ConfirmacionV extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Pagar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pagar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addComponent(Volver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
+        confC.volver();
+    }//GEN-LAST:event_VolverActionPerformed
+
+    private void PagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PagarActionPerformed
+        confC.adelante();
+    }//GEN-LAST:event_PagarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -494,6 +519,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
     private javax.swing.JLabel Sexo_3;
     private javax.swing.JLabel Sexo_4;
     private javax.swing.JLabel Sexo_5;
+    private javax.swing.JButton Volver;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

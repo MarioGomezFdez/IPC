@@ -5,6 +5,7 @@
  */
 package Validacion.ui;
 
+import Inscripcion.main.Inscripcion;
 /**
  *
  * @author Mario
@@ -33,6 +34,9 @@ public class ValidacionC {
         }
         
         return rellenos;
+    }
+    public void Volver(){
+        Inscripcion.ValidacionToConfirmacion();
     }
 
  

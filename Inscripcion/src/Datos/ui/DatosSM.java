@@ -45,7 +45,7 @@ public class DatosSM {
             partActual++;
             show();
         } else {
-            //ir a confirmacion y ocultar esto 
+            Inscripcion.datosToConfirmacion();
         }
     }
 
@@ -55,7 +55,7 @@ public class DatosSM {
             partActual--;
             show();
         } else {
-            Inscripcion.inscripciones();
+            Inscripcion.datosToCategoria();
         }
     }
 

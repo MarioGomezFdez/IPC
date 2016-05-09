@@ -7,7 +7,9 @@ package Inscripcion.main;
 
 import Categoria.ui.CategoriaSM;
 import Datos.ui.*;
+import Confirmacion.ui.*;
 import javax.swing.UIManager;
+import Validacion.ui.*;
 
 /**
  *
@@ -17,7 +19,8 @@ public class Inscripcion {
 
     private static CategoriaSM categoriaSM;
     private static DatosSM datosSM;
-
+    private static ConfirmacionSM confSM;
+    private static ValidacionSM validSM;
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -42,14 +45,32 @@ public class Inscripcion {
 
     }
 
-    public static void participantes(int numParticipantes) {
+    public static void categoriaToDatos(int numParticipantes) {
         categoriaSM.hide();
         datosSM = new DatosSM(numParticipantes);
     }
     
-    public static void inscripciones (){
+    public static void datosToCategoria (){
         datosSM.hide();
         categoriaSM.show();
+    }
+    
+    public static void datosToConfirmacion(){
+        datosSM.hide();//deberia hacer dispose seguramente. deberia hacer un dispose para todas las ventanas
+        confSM = new ConfirmacionSM();
+    }
+    
+    public static void ConfirmacionToDatos(){
+        confSM.close();
+        datosSM.show();
+    }
+    public static void ConfirmacionToValidacion(){
+        confSM.hide();
+        validSM = new ValidacionSM();
+    }
+    public static void ValidacionToConfirmacion(){
+        validSM.close();
+        confSM.show();
     }
 
     public static CategoriaSM getCategoriaSM() {
@@ -59,5 +80,11 @@ public class Inscripcion {
     public static DatosSM getDatosSM() {
         return datosSM;
     }
-
+    
+    public static ConfirmacionSM getConfSM(){
+        return confSM;
+    }
+    public static ValidacionSM getValidSM(){
+        return validSM;
+    }
 }
