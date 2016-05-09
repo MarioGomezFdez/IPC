@@ -64,7 +64,7 @@ public class DatosV extends javax.swing.JFrame {
         CmbAno = new javax.swing.JComboBox<>();
         OtraUni = new javax.swing.JPanel();
         TextOtraUni = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        Nota = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inscripcion");
@@ -166,6 +166,11 @@ public class DatosV extends javax.swing.JFrame {
         Sexo.setText("Sexo");
 
         Continuar.setText("Continuar");
+        Continuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContinuarActionPerformed(evt);
+            }
+        });
 
         Volver.setText("Volver");
         Volver.addActionListener(new java.awt.event.ActionListener() {
@@ -187,7 +192,7 @@ public class DatosV extends javax.swing.JFrame {
 
         OtraUni.setVisible(false);
 
-        jLabel1.setText("<html><font color='red'>*</font>Campos obligatorios</html>");
+        Nota.setText("<html><font color='red'>*</font>Campos obligatorios</html>");
 
         javax.swing.GroupLayout DatosPartLayout = new javax.swing.GroupLayout(DatosPart);
         DatosPart.setLayout(DatosPartLayout);
@@ -233,7 +238,7 @@ public class DatosV extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(RellenarChk)
-                            .addComponent(jLabel1)))
+                            .addComponent(Nota)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DatosPartLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(Volver)
@@ -251,7 +256,7 @@ public class DatosV extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TextAp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(Nota))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TextAp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -398,6 +403,12 @@ public class DatosV extends javax.swing.JFrame {
         datControl.abreventanaInscripcion();
     }//GEN-LAST:event_VolverActionPerformed
 
+    private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
+        if (datControl.validacion()) {
+            //datControl.abreVentanaParticipante();
+        }
+    }//GEN-LAST:event_ContinuarActionPerformed
+
     public String[] creaFechas() {
         String[] fechas = new String[99];
         for (int i = 0; i <= 98; i++) {
@@ -412,6 +423,23 @@ public class DatosV extends javax.swing.JFrame {
         } else {
             OtraUni.setVisible(false);
         }
+    }
+    public javax.swing.JTextField getNombre() {
+        return TextNombre;
+    }
+
+    public javax.swing.JTextField getAp1() {
+        return TextAp1;
+    }
+
+    public javax.swing.JTextField getCorreo() {
+        return TextCorreo;
+    }
+     public javax.swing.JTextField getNIF() {
+        return TextNIF;
+    }
+    public javax.swing.JLabel getNota() {
+        return Nota;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -429,6 +457,7 @@ public class DatosV extends javax.swing.JFrame {
     private javax.swing.JLabel Fecha;
     private javax.swing.ButtonGroup GroupCentro;
     private javax.swing.ButtonGroup GroupSexo;
+    private javax.swing.JLabel Nota;
     private javax.swing.JPanel OtraUni;
     private javax.swing.JCheckBox RellenarChk;
     private javax.swing.JLabel Sexo;
@@ -439,6 +468,5 @@ public class DatosV extends javax.swing.JFrame {
     private javax.swing.JTextField TextNombre;
     private javax.swing.JTextField TextOtraUni;
     private javax.swing.JButton Volver;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

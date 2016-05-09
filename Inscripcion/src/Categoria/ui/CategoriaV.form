@@ -192,7 +192,7 @@
         <Component class="javax.swing.JLabel" name="Nota">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;&lt;html&gt;&lt;font color=&apos;red&apos;&gt;Nota&lt;/font&gt;: un solicitante solo puede pedir 5 participaciones en total&lt;/html&gt;&quot;" type="code"/>
+              <Connection code="&quot;&lt;html&gt;&lt;font color=&apos;red&apos;&gt;Nota&lt;/font&gt;: Maximo 5 participaciones, minimo 1&lt;/html&gt;&quot;" type="code"/>
             </Property>
           </Properties>
         </Component>

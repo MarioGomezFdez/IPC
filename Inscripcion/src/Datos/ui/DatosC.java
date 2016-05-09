@@ -10,14 +10,26 @@ package Datos.ui;
  * @author Mario
  */
 public class DatosC {
-    private DatosV vista;
+     DatosV datVista;
     
-    public DatosC(DatosV vista) {
-        this.vista = vista;
+    public DatosC(DatosV datVista) {
+        this.datVista = datVista;
     }
     
     public void abreventanaInscripcion(){
-        
         Inscripcion.inscripciones();
+    }
+    public boolean validacion() {
+        
+        boolean  datosCorrecto = true;
+     
+       
+        if (((datVista.getNombre().equals("Nombre*")) || (datVista.getNombre().getText().equals(""))) || ((datVista.getAp1().getText().equals("Primer apellido*")) || (datVista.getAp1().getText().equals(""))) || ((datVista.getCorreo().getText().equals("Correo*")) || (datVista.getCorreo().getText().equals("")))||((datVista.getNIF().equals("NIF*")) || (datVista.getNIF().getText().equals("")))) {
+            System.out.println("holo");
+            datVista.getNota().setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
+            datosCorrecto = false;
+        }
+        
+        return datosCorrecto;
     }
 }

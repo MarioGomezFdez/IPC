@@ -103,7 +103,7 @@ public class CategoriaV extends javax.swing.JFrame {
         Profesores_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
         Profesores_spn.setEnabled(false);
 
-        Nota.setText("<html><font color='red'>Nota</font>: un solicitante solo puede pedir 5 participaciones en total</html>");
+        Nota.setText("<html><font color='red'>Nota</font>: Maximo 5 participaciones, minimo 1</html>");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
