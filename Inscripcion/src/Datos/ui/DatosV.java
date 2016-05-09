@@ -131,6 +131,7 @@ public class DatosV extends javax.swing.JFrame {
         });
 
         GroupSexo.add(ButHombre);
+        ButHombre.setSelected(true);
         ButHombre.setText("Hombre");
 
         GroupSexo.add(ButMujer);
