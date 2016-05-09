@@ -64,20 +64,44 @@ public class CategoriaV extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Categoria"));
 
         Absoluta_chk.setText("Absoluta");
+        Absoluta_chk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Absoluta_chkActionPerformed(evt);
+            }
+        });
 
         AbsolutaSex_chk.setText("Absoluta por sexo");
+        AbsolutaSex_chk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AbsolutaSex_chkActionPerformed(evt);
+            }
+        });
 
         Alumnos_chk.setText("Alumnos");
+        Alumnos_chk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Alumnos_chkActionPerformed(evt);
+            }
+        });
 
         Profesores_chk.setText("Profesores");
+        Profesores_chk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Profesores_chkActionPerformed(evt);
+            }
+        });
 
         Absoluta_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Absoluta_spn.setEnabled(false);
 
         AbsolutaSex_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        AbsolutaSex_spn.setEnabled(false);
 
         Alumnos_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Alumnos_spn.setEnabled(false);
 
         Profesores_spn.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+        Profesores_spn.setEnabled(false);
 
         Nota.setText("<html><font color='red'>Nota</font>: un solicitante solo puede pedir 5 participaciones en total</html>");
 
@@ -130,7 +154,6 @@ public class CategoriaV extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Solicitante"));
 
         Nombre_text.setText("Nombre*");
-        Nombre_text.setNextFocusableComponent(Continuar);
         Nombre_text.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 Nombre_textFocusGained(evt);
@@ -360,6 +383,38 @@ public class CategoriaV extends javax.swing.JFrame {
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         catControl.exit();
     }//GEN-LAST:event_SalirActionPerformed
+
+    private void Absoluta_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Absoluta_chkActionPerformed
+        if (Absoluta_chk.isSelected()){
+            Absoluta_spn.setEnabled(true);
+        } else {
+            Absoluta_spn.setEnabled(false);
+        }
+    }//GEN-LAST:event_Absoluta_chkActionPerformed
+
+    private void AbsolutaSex_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbsolutaSex_chkActionPerformed
+        if (AbsolutaSex_chk.isSelected()){
+            AbsolutaSex_spn.setEnabled(true);
+        } else {
+            AbsolutaSex_spn.setEnabled(false);
+        }
+    }//GEN-LAST:event_AbsolutaSex_chkActionPerformed
+
+    private void Alumnos_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alumnos_chkActionPerformed
+        if (Alumnos_chk.isSelected()){
+            Alumnos_spn.setEnabled(true);
+        } else {
+            Alumnos_spn.setEnabled(false);
+        }
+    }//GEN-LAST:event_Alumnos_chkActionPerformed
+
+    private void Profesores_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Profesores_chkActionPerformed
+        if (Profesores_chk.isSelected()){
+            Profesores_spn.setEnabled(true);
+        } else {
+            Profesores_spn.setEnabled(false);
+        }
+    }//GEN-LAST:event_Profesores_chkActionPerformed
 
     /**
      * @param args the command line arguments
