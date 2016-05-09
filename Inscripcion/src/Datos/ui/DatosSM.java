@@ -27,11 +27,12 @@ public class DatosSM {
             }
         });
     }
+
     public void hide() {
-        
         ventana.setVisible(false);
     }
-    public void show(){
+
+    public void show() {
         ventana.setVisible(true);
     }
 
@@ -40,4 +41,3 @@ public class DatosSM {
         System.exit(0);
     }
 }
-

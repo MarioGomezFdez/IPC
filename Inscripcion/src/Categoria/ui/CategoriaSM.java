@@ -31,7 +31,8 @@ public class CategoriaSM {
     public void hide() {
         ventana.setVisible(false);
     }
-     public void show(){
+
+    public void show() {
         ventana.setVisible(true);
     }
 

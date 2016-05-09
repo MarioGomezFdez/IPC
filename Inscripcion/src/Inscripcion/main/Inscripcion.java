@@ -16,7 +16,9 @@ import javax.swing.UIManager;
 public class Inscripcion {
 
     private static CategoriaSM categoriaSM;
-    private static DatosSM datosSM;
+    private static DatosSM datosSM;/*vector de DatosSM*/
+    private static int numParticipantes;
+    private static int participanteActual;
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -42,12 +44,37 @@ public class Inscripcion {
 
     }
 
-    public static void participantes() {
+    public static void participantes(/*int numParticipantes*/) {
+        /*this.numParticipantes = numParticipantes;*/
         categoriaSM.hide();
-        datosSM = new DatosSM();
+        datosSM = new DatosSM();/*inicializar el vector con numParticipantes. Start no tendra el show(true) en start*/
+        /*participanteActual = 0;*/
+        /*DatosSM[participanteActual].show();*/
     }
+    
+    /*public static void sigParticipante(){
+        if(participacionesActual<numParticipantes){
+            DatosSM[participanteActual].hide();
+            participanteActual++;
+            DatosSM[participanteActual].show();
+        }else{
+            confirmacion(); //metodo que abra la ultima ventana, como dios quiera que se llame
+        }
+    }
+    */
+    
+    /*public static void antParticipante(){
+        DatosSM[participanteActual].hide();
+        if(participanteActual>0){
+            participanteActual--;
+            DatosSM[participanteActual].show();
+        }else{
+            inscripciones();
+        }
+    }
+    */
+    
     public static void inscripciones (){
-        
         datosSM.hide();
         categoriaSM.show();
     }
