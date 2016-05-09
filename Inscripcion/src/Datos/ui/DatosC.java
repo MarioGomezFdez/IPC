@@ -16,7 +16,7 @@ public class DatosC {
         this.datVista = datVista;
     }
     
-    public void abreventanaInscripcion(){
+    public void abreVentanaInscripcion(){
         Inscripcion.inscripciones();
     }
     public boolean validacion() {

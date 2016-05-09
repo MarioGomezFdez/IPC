@@ -5,6 +5,8 @@
  */
 package Datos.ui;
 
+import Inscripcion.main.Inscripcion;
+
 import javax.swing.JFrame;
 
 /**
@@ -53,7 +55,7 @@ public class DatosSM {
             partActual--;
             show();
         } else {
-            //ir a categoria y cerrar esto
+            Inscripcion.inscripciones();
         }
     }
 

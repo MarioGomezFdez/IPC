@@ -401,7 +401,7 @@ public class DatosV extends javax.swing.JFrame {
     }//GEN-LAST:event_TextNIFFocusLost
 
     private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
-        datControl.abreventanaInscripcion();
+        datControl.abreVentanaInscripcion();
     }//GEN-LAST:event_VolverActionPerformed
 
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
