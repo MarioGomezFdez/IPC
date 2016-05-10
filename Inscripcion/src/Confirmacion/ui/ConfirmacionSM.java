@@ -15,7 +15,7 @@ public class ConfirmacionSM {
     
     JFrame ventana = new JFrame();
     
-    public ConfirmacionSM(){
+    public ConfirmacionSM(int numParticipantes){
         start();
     }
     
