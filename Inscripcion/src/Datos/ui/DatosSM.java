@@ -45,7 +45,7 @@ public class DatosSM {
             partActual++;
             show();
         } else {
-            Inscripcion.datosToConfirmacion();
+            Inscripcion.datosToConfirmacion(numParticipantes);
         }
     }
 
