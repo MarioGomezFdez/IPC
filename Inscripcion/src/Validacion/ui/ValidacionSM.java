@@ -9,34 +9,50 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Miguel
+ * @author Mario Gomez Fernandez
+ * @author Miguel Bayon Sanz
  */
 public class ValidacionSM {
-    
-     JFrame ventana = new JFrame();
-    
-    public ValidacionSM(){
+
+    JFrame ventana = new JFrame();
+
+    /**
+     * Constructor que inicializa la ventana
+     */
+    public ValidacionSM() {
         start();
     }
-    
-    public void start(){
+
+    /**
+     * Inicializa la ventana y la hace visible
+     */
+    public void start() {
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run(){
-                    ventana = new ValidacionV();
-                    ventana.setVisible(true);
+            public void run() {
+                ventana = new ValidacionV();
+                ventana.setVisible(true);
             }
         });
     }
-    
-    public void hide(){
+
+    /**
+     * Oculta la ventana de validacion
+     */
+    public void hide() {
         ventana.setVisible(false);
     }
-    
-    public void show(){
+
+    /**
+     * Muestra la ventana de validacion
+     */
+    public void show() {
         ventana.setVisible(true);
     }
-    
-    public void close(){
+
+    /**
+     * Cierra la ventana de validacion
+     */
+    public void close() {
         ventana.dispose();
     }
 }
