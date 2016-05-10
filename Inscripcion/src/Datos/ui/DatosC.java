@@ -24,6 +24,7 @@ public class DatosC {
     }
 
     public void abreSiguiente() {
+        
         Inscripcion.getDatosSM().siguiente();
     }
 

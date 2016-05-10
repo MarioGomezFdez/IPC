@@ -6,6 +6,7 @@
 package Datos.ui;
 
 import Inscripcion.main.Inscripcion;
+import Inscripcion.model.Persona;
 
 import javax.swing.JFrame;
 
@@ -45,6 +46,9 @@ public class DatosSM {
             partActual++;
             show();
         } else {
+            for (int i = 0; i < numParticipantes; i++){
+ //               Inscripcion.addPersona(new Persona(ventana[i].getNombre(), ventana[i].getAp1(), ventana[i].getCorreo()) );
+            }
             Inscripcion.datosToConfirmacion(numParticipantes);
         }
     }

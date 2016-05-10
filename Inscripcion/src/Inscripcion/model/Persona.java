@@ -1,24 +1,49 @@
 package Inscripcion.model;
 
+import Confirmacion.ui.ConfirmacionV;
+
 /**
  *
  * @author Mario Gomez Fernandez
  * @author Miguel Bayon Sanz
  */
 public class Persona {
-
-    private String nombre, ap1, ap2, correo, nif, mes, centro;
+    ConfirmacionV confV;
+    private String nombre, ap1, ap2, correo, nif, mes, centro, categoria;
     private int dia, ano;
     private boolean hombre;
 
     public Persona(String nombre, String ap1, String correo) {
+        
         this.nombre = nombre;
+        System.out.print(nombre);
         this.ap1 = ap1;
         this.correo = correo;
+        
+    }
+    
+    public Persona(String nombre, String ap1, String correo, int dia, String mes, int ano, String centro, String nif, String categoria, boolean hombre) {
+        
+        this.nombre = nombre;
+        System.out.print(nombre);
+        this.ap1 = ap1;
+        this.correo = correo;
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+        this.centro = centro;
+        this.categoria = categoria;
+        this.hombre = hombre;
+        this.nif = nif;
     }
 
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+        
+    }
     public void setNombre(String nombre) {
         this.nombre = nombre;
+        
     }
 
     public void setAp1(String ap1) {
@@ -77,8 +102,11 @@ public class Persona {
         return nif;
     }
         
-    public boolean getSexo(){
-        return hombre;
+    public String getSexo(){
+        String m= "masculino",f="femenino";
+        if(hombre){
+        return m;
+        }else return f;
     }
         
     public int getDia(){
@@ -95,5 +123,8 @@ public class Persona {
         
     public String getCentro(){
         return centro;
+    }
+    public String getCategoria(){
+        return categoria;
     }
 }
