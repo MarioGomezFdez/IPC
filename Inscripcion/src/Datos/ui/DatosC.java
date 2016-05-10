@@ -66,8 +66,16 @@ public class DatosC {
         String dni = datVista.getNIF().getText();
         String numero = dni.substring(0,dni.length()-1 );
         String let = dni.substring(dni.length()-1,dni.length());
-        
+        if (numero.length()==8){
+        for (int i=0; i<8; i++) {
+             if(!Character.isDigit(dni.charAt(i))){
+                   datosCorrecto = false;
+                    datVista.getNota().setText("<html><font color='red'>*Introduzca dni valido</font></html>");
+             }
+        }  
+        }
         if (numero.length()!=8||!Character.isLetter(let.charAt(0))){
+            
             datVista.getNota().setText("<html><font color='red'>*Introduzca dni valido</font></html>");
             datosCorrecto=false;
             
