@@ -44,7 +44,7 @@ public class DatosC {
     public boolean validacion() {
 
         boolean datosCorrecto = true;
-
+        
         if (datVista.getNombre().getText().equals("Nombre*")
                 || datVista.getNombre().getText().equals("")
                 || datVista.getAp1().getText().equals("Primer apellido*")
@@ -63,6 +63,17 @@ public class DatosC {
                 datVista.getNota().setText("<html><font color='red'>*Introduzca nombre y apellidos validos</font></html>");
                 datosCorrecto = false;
         }
+        String dni = datVista.getNIF().getText();
+        String numero = dni.substring(0,dni.length()-1 );
+        String let = dni.substring(dni.length()-1,dni.length());
+        
+        if (numero.length()!=8||!Character.isLetter(let.charAt(0))){
+            datVista.getNota().setText("<html><font color='red'>*Introduzca dni valido</font></html>");
+            datosCorrecto=false;
+            
+        }
+        
+        
         return datosCorrecto;
     }
 }
