@@ -46,9 +46,23 @@ public class Inscripcion {
 
         /* Create and display the form */
         categoriaSM = new CategoriaSM();
- //       personas = new ArrayList<>;
+        personas = new ArrayList<Persona>();
     }
 
+    public static void addPersona(Persona nuevaPersona){
+        personas.add(nuevaPersona);
+    }
+    
+    public static void removeLista(){
+        personas.clear();
+    }
+    
+    public static Persona getPersona (int i){
+        //Por defecto y motivos de codigo, la posicion 0 sera el solicitante
+        return personas.get(i);
+    }
+    
+    //Movimiento entre ventanas
     public static void categoriaToDatos(int numParticipantes) {
         categoriaSM.hide();
         datosSM = new DatosSM(numParticipantes);
@@ -77,6 +91,7 @@ public class Inscripcion {
         confSM.show();
     }
 
+    //Getters de maquinas de estado
     public static CategoriaSM getCategoriaSM() {
         return categoriaSM;
     }

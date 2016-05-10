@@ -1,6 +1,7 @@
 package Categoria.ui;
 
 import Inscripcion.main.Inscripcion;
+import Inscripcion.model.Persona;
 
 /**
  * @author Mario Gomez Fernandez
@@ -44,6 +45,15 @@ public class CategoriaC {
     }
 
     public void abreVentanaParticipante() {
+        Persona newPersona = new Persona(catVista.getNombre().getText(),
+                catVista.getAp1().getText(),
+                catVista.getCorreo().getText());
+        
+        if (!catVista.getAp2().getText().equals("")&&!catVista.getAp2().getText().equals("Segundo apellido")){
+            newPersona.setAp2(catVista.getAp2().getText());
+        }
+        
+        Inscripcion.addPersona(newPersona);
         Inscripcion.categoriaToDatos((Integer) catVista.getAbsoluta_spn() + (Integer) catVista.getAbsolutaSex_spn() + (Integer) catVista.getAlumnos_spn() + (Integer) catVista.getProfesores_spn());
     }
 

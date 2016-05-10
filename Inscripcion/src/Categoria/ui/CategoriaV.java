@@ -368,6 +368,10 @@ public class CategoriaV extends javax.swing.JFrame {
         return Ap1_text;
     }
 
+    public javax.swing.JTextField getAp2() {
+        return Ap2_text;
+    }
+
     public javax.swing.JTextField getCorreo() {
         return Correo_text;
     }
@@ -385,7 +389,7 @@ public class CategoriaV extends javax.swing.JFrame {
     }//GEN-LAST:event_SalirActionPerformed
 
     private void Absoluta_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Absoluta_chkActionPerformed
-        if (Absoluta_chk.isSelected()){
+        if (Absoluta_chk.isSelected()) {
             Absoluta_spn.setEnabled(true);
         } else {
             Absoluta_spn.setEnabled(false);
@@ -393,7 +397,7 @@ public class CategoriaV extends javax.swing.JFrame {
     }//GEN-LAST:event_Absoluta_chkActionPerformed
 
     private void AbsolutaSex_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbsolutaSex_chkActionPerformed
-        if (AbsolutaSex_chk.isSelected()){
+        if (AbsolutaSex_chk.isSelected()) {
             AbsolutaSex_spn.setEnabled(true);
         } else {
             AbsolutaSex_spn.setEnabled(false);
@@ -401,7 +405,7 @@ public class CategoriaV extends javax.swing.JFrame {
     }//GEN-LAST:event_AbsolutaSex_chkActionPerformed
 
     private void Alumnos_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alumnos_chkActionPerformed
-        if (Alumnos_chk.isSelected()){
+        if (Alumnos_chk.isSelected()) {
             Alumnos_spn.setEnabled(true);
         } else {
             Alumnos_spn.setEnabled(false);
@@ -409,7 +413,7 @@ public class CategoriaV extends javax.swing.JFrame {
     }//GEN-LAST:event_Alumnos_chkActionPerformed
 
     private void Profesores_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Profesores_chkActionPerformed
-        if (Profesores_chk.isSelected()){
+        if (Profesores_chk.isSelected()) {
             Profesores_spn.setEnabled(true);
         } else {
             Profesores_spn.setEnabled(false);
