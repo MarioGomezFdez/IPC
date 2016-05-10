@@ -5,11 +5,13 @@
  */
 package Inscripcion.main;
 
-import Categoria.ui.CategoriaSM;
+import Categoria.ui.*;
 import Datos.ui.*;
 import Confirmacion.ui.*;
-import javax.swing.UIManager;
 import Validacion.ui.*;
+import Inscripcion.model.Persona;
+import javax.swing.UIManager;
+import java.util.ArrayList;
 
 /**
  *
@@ -21,6 +23,8 @@ public class Inscripcion {
     private static DatosSM datosSM;
     private static ConfirmacionSM confSM;
     private static ValidacionSM validSM;
+    private static ArrayList<Persona> personas;
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -42,7 +46,7 @@ public class Inscripcion {
 
         /* Create and display the form */
         categoriaSM = new CategoriaSM();
-
+ //       personas = new ArrayList<>;
     }
 
     public static void categoriaToDatos(int numParticipantes) {
@@ -55,9 +59,9 @@ public class Inscripcion {
         categoriaSM.show();
     }
     
-    public static void datosToConfirmacion(){
+    public static void datosToConfirmacion(int numParticipantes){
         datosSM.hide();//deberia hacer dispose seguramente. deberia hacer un dispose para todas las ventanas
-        confSM = new ConfirmacionSM();
+        confSM = new ConfirmacionSM(numParticipantes);
     }
     
     public static void ConfirmacionToDatos(){
