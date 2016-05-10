@@ -18,6 +18,7 @@ public class Persona {
         this.nombre = nombre;
         System.out.print(nombre);
         this.ap1 = ap1;
+        this.ap2 = "";
         this.correo = correo;
         
     }

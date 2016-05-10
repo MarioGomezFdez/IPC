@@ -76,6 +76,8 @@ public class Inscripcion {
     
     public static void datosToCategoria (){
         datosSM.hide();
+        categorias.clear();
+        personas.clear();
         categoriaSM.show();
     }
     
@@ -86,6 +88,9 @@ public class Inscripcion {
     
     public static void ConfirmacionToDatos(){
         confSM.close();
+        for (int i = 0; i<personas.size(); i++){
+            personas.remove(1);
+        }
         datosSM.show();
     }
     public static void ConfirmacionToValidacion(){

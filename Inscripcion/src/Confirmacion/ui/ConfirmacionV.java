@@ -101,9 +101,9 @@ public class ConfirmacionV extends javax.swing.JFrame {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(440, 1729));
         jScrollPane2.setVerifyInputWhenFocusTarget(false);
 
-        jPanelContenedor.setLayout(new java.awt.GridLayout(5, 1));
-
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Primer participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
+        jPanel1.setMaximumSize(new java.awt.Dimension(150, 150));
+        jPanel1.setMinimumSize(new java.awt.Dimension(150, 150));
         jPanel1.setPreferredSize(new java.awt.Dimension(150, 150));
 
         Nombre_1.setText("Nombre");
@@ -140,7 +140,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
                     .addComponent(Sexo_1)
                     .addComponent(Categoria_1)
                     .addComponent(Centro_1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,9 +163,9 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelContenedor.add(jPanel1);
-
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
+        jPanel2.setMaximumSize(new java.awt.Dimension(150, 150));
+        jPanel2.setMinimumSize(new java.awt.Dimension(150, 150));
 
         Nombre_2.setText("Nombre");
 
@@ -201,7 +201,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
                     .addComponent(Sexo_2)
                     .addComponent(Categoria_2)
                     .addComponent(Centro_2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,8 +223,6 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addComponent(Centro_2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jPanelContenedor.add(jPanel2);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tercer participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
@@ -267,7 +265,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre_3)
                     .addComponent(Ap1_3)
@@ -281,11 +279,8 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Categoria_3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Centro_3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Centro_3))
         );
-
-        jPanelContenedor.add(jPanel3);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cuarto participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
@@ -346,8 +341,6 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelContenedor.add(jPanel4);
-
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quinto participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
         Nombre_5.setText("Nombre");
@@ -407,7 +400,34 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelContenedor.add(jPanel5);
+        javax.swing.GroupLayout jPanelContenedorLayout = new javax.swing.GroupLayout(jPanelContenedor);
+        jPanelContenedor.setLayout(jPanelContenedorLayout);
+        jPanelContenedorLayout.setHorizontalGroup(
+            jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelContenedorLayout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanelContenedorLayout.createSequentialGroup()
+                .addGroup(jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanelContenedorLayout.setVerticalGroup(
+            jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelContenedorLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         jScrollPane2.setViewportView(jPanelContenedor);
 
@@ -489,8 +509,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
    
    public void Rellena_1(){
        
-       Inscripcion.getPersona(1).getNombre();
-       
+      
        Nombre_1.setText(Inscripcion.getPersona(1).getNombre());
        Ap1_1.setText(Inscripcion.getPersona(1).getAp1());
        Ap2_1.setText(Inscripcion.getPersona(1).getAp2());

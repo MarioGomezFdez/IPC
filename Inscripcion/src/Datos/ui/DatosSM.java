@@ -21,7 +21,7 @@ public class DatosSM {
     public DatosSM(int numParticipantes) {
         ventana = new DatosV[numParticipantes];
         for (int i = 0; i < numParticipantes; i++) {
-            ventana[i] = new DatosV();
+            ventana[i] = new DatosV(i,numParticipantes);
         }
         this.numParticipantes = numParticipantes;
         partActual = 0;

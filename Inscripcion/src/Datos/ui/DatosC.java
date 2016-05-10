@@ -20,6 +20,10 @@ public class DatosC {
         this.datVista = datVista;
     }
 
+    public String getCategoriaI(int i) {
+        return Inscripcion.getCategorias().get(i);
+    }
+    
     public void abreAnterior() {
         Inscripcion.getDatosSM().anterior();
     }

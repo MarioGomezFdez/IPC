@@ -5,8 +5,10 @@
  */
 package Datos.ui;
 
+import Inscripcion.main.Inscripcion;
 import java.awt.Color;
 import javax.swing.UIManager;
+import javax.swing.border.TitledBorder;
 
 /**
  *
@@ -15,11 +17,13 @@ import javax.swing.UIManager;
 public class DatosV extends javax.swing.JFrame {
 
     DatosC datControl;
+    String categoria;
+    int numPart;
 
     /**
      * Creates new form DatosV
      */
-    public DatosV() {
+    public DatosV(int numPart, int total) {
         initComponents();
         setLocationRelativeTo(null);
         TextNombre.setForeground(Color.GRAY);
@@ -29,6 +33,13 @@ public class DatosV extends javax.swing.JFrame {
         TextNIF.setForeground(Color.GRAY);
         Continuar.requestFocus();
         datControl = new DatosC(this);
+        this.categoria = categoria;
+        cambiarBorde(numPart,total);
+        System.out.println(datControl.getCategoriaI(numPart));
+    }
+    public void cambiarBorde(int numPart, int total){
+        TitledBorder tmp = (TitledBorder) this.DatosPart.getBorder();
+            tmp.setTitle("Datos de usuario "+(numPart+1)+"/"+total+" Categoria: "+datControl.getCategoriaI(numPart));
     }
 
     /**
@@ -302,10 +313,21 @@ public class DatosV extends javax.swing.JFrame {
 
     private void RellenarChkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RellenarChkActionPerformed
         if (RellenarChk.isSelected()) {
+            
             TextNombre.setEnabled(false);
             TextAp1.setEnabled(false);
             TextAp2.setEnabled(false);
             TextCorreo.setEnabled(false);
+            
+            TextNombre.setText(Inscripcion.getPersona(0).getNombre());
+            TextAp1.setText(Inscripcion.getPersona(0).getAp1());
+            if((Inscripcion.getPersona(0).getAp2()).equals("")){
+                TextAp2.setEnabled(true);
+            }else{
+                TextAp2.setText(Inscripcion.getPersona(0).getAp2());
+            }
+            TextCorreo.setText(Inscripcion.getPersona(0).getCorreo());
+            
         } else {
             TextNombre.setEnabled(true);
             TextAp1.setEnabled(true);
