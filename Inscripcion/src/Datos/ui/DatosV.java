@@ -35,7 +35,6 @@ public class DatosV extends javax.swing.JFrame {
         datControl = new DatosC(this);
         this.categoria = categoria;
         cambiarBorde(numPart,total);
-        System.out.println(datControl.getCategoriaI(numPart));
     }
     public void cambiarBorde(int numPart, int total){
         TitledBorder tmp = (TitledBorder) this.DatosPart.getBorder();
@@ -431,6 +430,10 @@ public class DatosV extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ContinuarActionPerformed
 
+    public void cerrarVentana(){
+        Inscripcion.getDatosSM().close();
+    }
+    
     public String[] creaFechas() {
         String[] fechas = new String[99];
         for (int i = 0; i <= 98; i++) {

@@ -75,7 +75,7 @@ public class Inscripcion {
     }
     
     public static void datosToCategoria (){
-        datosSM.hide();
+        datosSM.close();
         categorias.clear();
         personas.clear();
         categoriaSM.show();

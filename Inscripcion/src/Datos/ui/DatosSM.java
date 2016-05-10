@@ -77,6 +77,8 @@ public class DatosSM {
     }
 
     public void close() {
-        ventana[partActual].dispose();
+        for(int i = 0; i < numParticipantes; i++){
+            ventana[i].dispose();
+        }
     }
 }

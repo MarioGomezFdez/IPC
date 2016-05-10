@@ -16,7 +16,6 @@ public class Persona {
     public Persona(String nombre, String ap1, String correo) {
         
         this.nombre = nombre;
-        System.out.print(nombre);
         this.ap1 = ap1;
         this.ap2 = "";
         this.correo = correo;
@@ -26,7 +25,6 @@ public class Persona {
     public Persona(String nombre, String ap1, String ap2, String correo, int dia, String mes, int ano, String centro, String nif, boolean hombre) {
         
         this.nombre = nombre;
-        System.out.print(nombre);
         this.ap1 = ap1;
         this.ap2 = ap2;
         this.correo = correo;
