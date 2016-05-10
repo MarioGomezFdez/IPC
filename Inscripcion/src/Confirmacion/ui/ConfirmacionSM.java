@@ -16,13 +16,16 @@ public class ConfirmacionSM {
     JFrame ventana = new JFrame();
     
     public ConfirmacionSM(int numParticipantes){
-        start();
+        int participantes = numParticipantes;
+        start(participantes);
+        
     }
     
-    public void start(){
+    public void start(int numParticipantes){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run(){
-                    ventana = new ConfirmacionV();
+                int participantes = numParticipantes;
+                    ventana = new ConfirmacionV(participantes);
                     ventana.setVisible(true);
             }
         });

@@ -15,13 +15,20 @@ public class ConfirmacionV extends javax.swing.JFrame {
 
     ConfirmacionC confC;
     
-    public ConfirmacionV() {
+    public ConfirmacionV(int numParticipantes) {
         initComponents();
+        
+        int participantes = numParticipantes;
+        
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
+        
         setLocationRelativeTo(null);
+        
+        setLabels(participantes);
+        
         confC = new ConfirmacionC (this);
         
     }
@@ -455,7 +462,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-   public void setLAbels(int participantes){
+   public void setLabels(int participantes){
        
       switch(participantes){
           
