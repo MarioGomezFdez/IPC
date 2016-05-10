@@ -69,8 +69,6 @@ public class ValidacionV extends javax.swing.JFrame {
 
         Instrucciones.setText("Introduzca nombre de usuario y contraseña (obligatorio): ");
 
-        Contraseña.setText("jPasswordField1");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

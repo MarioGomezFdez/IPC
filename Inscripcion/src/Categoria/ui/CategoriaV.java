@@ -279,14 +279,21 @@ public class CategoriaV extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Nombre_textFocusGained cambia a vacio el campo de nombre
+     * @param evt evento que cambia a vacio el campo de nombre
+     */
+     
     private void Nombre_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusGained
         Nombre_text.setForeground(Color.BLACK);
         if (Nombre_text.getText().equals("Nombre*")) {
             Nombre_text.setText("");
         }
     }//GEN-LAST:event_Nombre_textFocusGained
-
+    /**
+     * Nombre_textFocusLost escribe "Nombre" en el campo de nombre si este esta vacio
+     * @param evt evento que escribe "Nombre" en el campo de nombre si este esta vacio
+     */
     private void Nombre_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Nombre_textFocusLost
         if (Nombre_text.getText().equals("")) {
 
@@ -294,28 +301,40 @@ public class CategoriaV extends javax.swing.JFrame {
             Nombre_text.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_Nombre_textFocusLost
-
+    /**
+     * Ap1_textFocusGained cambia a vacio el campo de apellido 1
+     * @param evt evento que cambia a vacio el campo de apellido 1
+     */
     private void Ap1_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusGained
         Ap1_text.setForeground(Color.BLACK);
         if (Ap1_text.getText().equals("Primer apellido*")) {
             Ap1_text.setText("");
         }
     }//GEN-LAST:event_Ap1_textFocusGained
-
+    /**
+     * Ap1_textFocusLost escribe "Primer apellido" en el campo de apellido 1 si este esta vacio
+     * @param evt evento que escribe "Primer apellido" en el campo de apellido 1 si este esta vacio
+     */
     private void Ap1_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap1_textFocusLost
         if (Ap1_text.getText().equals("")) {
             Ap1_text.setText("Primer apellido*");
             Ap1_text.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_Ap1_textFocusLost
-
+    /**
+     * Ap2_textFocusGained cambia a vacio el campo de apellido 2
+     * @param evt evento que cambia a vacio el campo de apellido 2
+     */
     private void Ap2_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusGained
         Ap2_text.setForeground(Color.BLACK);
         if (Ap2_text.getText().equals("Segundo apellido")) {
             Ap2_text.setText("");
         }
     }//GEN-LAST:event_Ap2_textFocusGained
-
+    /**
+     * Ap2_textFocusLost escribe "Segundo apellido" en el campo de apellido 2 si este esta vacio
+     * @param evt evento que escribe "Segundo apellido" en el campo de apellido 2 si este esta vacio
+     */
     private void Ap2_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Ap2_textFocusLost
 
         if (Ap2_text.getText().equals("")) {
@@ -323,60 +342,100 @@ public class CategoriaV extends javax.swing.JFrame {
             Ap2_text.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_Ap2_textFocusLost
-
+    /**
+     * Correo_textFocusGained cambia a vacio el campo de Correo
+     * @param evt evento que cambia a vacio el campo de Correo
+     */
     private void Correo_textFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusGained
         Correo_text.setForeground(Color.BLACK);
         if (Correo_text.getText().equals("Correo*")) {
             Correo_text.setText("");
         }
     }//GEN-LAST:event_Correo_textFocusGained
-
+    /**
+     * Correo_textFocusLost escribe "Correo" en el campo de correo si este esta vacio
+     * @param evt evento que escribe "Correo" en el campo de correo si este esta vacio
+     */
     private void Correo_textFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Correo_textFocusLost
         if (Correo_text.getText().equals("")) {
             Correo_text.setText("Correo*");
             Correo_text.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_Correo_textFocusLost
+    /**
+     * getAbsoluta_spn getter del valor del JSpinner Absoluta_spn
+     * @return entero con el valor de las participaciones en Absoluta
+     */
     public int getAbsoluta_spn() {
         return (Integer) Absoluta_spn.getValue();
     }
-
+    /**
+     * getAbsolutaSex_spn getter del valor del JSpinner AbsolutaSex_spn
+     * @return entero con el valor de las participaciones en AbsolutaSex
+     */
     public int getAbsolutaSex_spn() {
         return (Integer) AbsolutaSex_spn.getValue();
     }
-
+    /**
+     * getAlumnos_spn getter del valor del JSpinner Alumnos_spn
+     * @return entero con el valor de las participaciones en Alumnos
+     */
     public int getAlumnos_spn() {
         return (Integer) Alumnos_spn.getValue();
     }
-
+    /**
+     * getProfesores_spn getter del valor del JSpinner Profesores_spn
+     * @return entero con el valor de las participaciones en Profesores
+     */
     public int getProfesores_spn() {
         return (Integer) Profesores_spn.getValue();
     }
-
+    /**
+     * getNota getter del JLabel Nota
+     * @return JLabel Nota
+     */
     public javax.swing.JLabel getNota() {
         return Nota;
     }
-
+    /**
+     * getNota getter del JLabel Asterisco
+     * @return JLabel Asterisco
+     */
     public javax.swing.JLabel getAsterisco() {
         return Asterisco;
     }
-
+    /**
+     * getNombre getter del JTextField Nombre_text
+     * @return JTextField Nombre
+     */
     public javax.swing.JTextField getNombre() {
         return Nombre_text;
     }
-
+    /**
+     * getAp1 getter del JTextField Ap1_text
+     * @return JTextField Ap1_text
+     */
     public javax.swing.JTextField getAp1() {
         return Ap1_text;
     }
-
+    /**
+     * getAp2 getter del JTextField Ap2_text
+     * @return JTextField Ap2_text
+     */
     public javax.swing.JTextField getAp2() {
         return Ap2_text;
     }
-
+    /**
+     * getAp1 getter del JTextField Correo_text
+     * @return JTextField Correo_text
+     */
     public javax.swing.JTextField getCorreo() {
         return Correo_text;
     }
-
+    /**
+     * getCategoria getter del ArrayList categorias
+     * @return ArrayList de tantas categorias como entradas seleccionadas
+     */
     public ArrayList<String> getCategoria(){ 
         //
         ArrayList<String> categorias = new ArrayList();
@@ -394,18 +453,27 @@ public class CategoriaV extends javax.swing.JFrame {
         }
         return categorias;
     }
-
+    /**
+     * ContinuarActionPerformed llama a la funcion del boton Continuar
+     * @param evt evento que activa la funcion de Continuar
+     */
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
         if (catControl.validacion()) {
             catControl.abreVentanaParticipante();
         }
 
     }//GEN-LAST:event_ContinuarActionPerformed
-
+     /**
+     * SalirActionPerformed llama a la funcion del boton Salir
+     * @param evt evento que activa la funcion de Salir
+     */
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         catControl.exit();
     }//GEN-LAST:event_SalirActionPerformed
-
+     /**
+     * Absoluta_chkActionPerformed Activa o desactiva el spinner de seleccion de participantes en categoria Absoluta
+     * @param evt evento que activa o desactiva Absoluta_spn
+     */
     private void Absoluta_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Absoluta_chkActionPerformed
         if (Absoluta_chk.isSelected()) {
             Absoluta_spn.setEnabled(true);
@@ -413,7 +481,10 @@ public class CategoriaV extends javax.swing.JFrame {
             Absoluta_spn.setEnabled(false);
         }
     }//GEN-LAST:event_Absoluta_chkActionPerformed
-
+    /**
+     * AbsolutaSex_chkActionPerformed Activa o desactiva el spinner de seleccion de participantes en categoria Absoluta por Sexos
+     * @param evt evento que activa o desactiva AbsolutaSex_spn
+     */
     private void AbsolutaSex_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbsolutaSex_chkActionPerformed
         if (AbsolutaSex_chk.isSelected()) {
             AbsolutaSex_spn.setEnabled(true);
@@ -421,7 +492,10 @@ public class CategoriaV extends javax.swing.JFrame {
             AbsolutaSex_spn.setEnabled(false);
         }
     }//GEN-LAST:event_AbsolutaSex_chkActionPerformed
-
+    /**
+     * Alumnos_chkActionPerformed Activa o desactiva el spinner de seleccion de participantes en categoria Alumnos
+     * @param evt evento que activa o desactiva Alumnos_spn
+     */
     private void Alumnos_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alumnos_chkActionPerformed
         if (Alumnos_chk.isSelected()) {
             Alumnos_spn.setEnabled(true);
@@ -429,7 +503,10 @@ public class CategoriaV extends javax.swing.JFrame {
             Alumnos_spn.setEnabled(false);
         }
     }//GEN-LAST:event_Alumnos_chkActionPerformed
-
+    /**
+     * Profesores_chkActionPerformed Activa o desactiva el spinner de seleccion de participantes en categoria Profesores
+     * @param evt evento que activa o desactiva Profesores_spn
+     */
     private void Profesores_chkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Profesores_chkActionPerformed
         if (Profesores_chk.isSelected()) {
             Profesores_spn.setEnabled(true);
