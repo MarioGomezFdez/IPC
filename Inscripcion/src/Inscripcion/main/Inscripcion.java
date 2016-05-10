@@ -15,7 +15,8 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Miguel
+ * @author Mario Gomez Fernandez
+ * @author Miguel Bayon Sanz
  */
 public class Inscripcion {
 
@@ -25,7 +26,10 @@ public class Inscripcion {
     private static ValidacionSM validSM;
     private static ArrayList<Persona> personas;
     private static ArrayList<String> categorias;
-    
+
+    /**
+     * Inicia el main que controla las maquinas de estado de las ventanas
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -50,71 +54,128 @@ public class Inscripcion {
         personas = new ArrayList<Persona>();
     }
 
-    public static void addPersona(Persona nuevaPersona){
+    /**
+     * Anade una nueva persona a la lista
+     *
+     * @param nuevaPersona
+     */
+    public static void addPersona(Persona nuevaPersona) {
         personas.add(nuevaPersona);
     }
-    
-    public static void removeLista(){
+
+    /**
+     * Borra la lista entera de personas
+     */
+    public static void removeLista() {
         personas.clear();
     }
-    
-    public static Persona getPersona (int i){
+
+    /**
+     * Devuelve la persona buscada en la lista
+     *
+     * @param i posicion buscada
+     * @return persona buscada
+     */
+    public static Persona getPersona(int i) {
         //Por defecto y motivos de codigo, la posicion 0 sera el solicitante
         return personas.get(i);
     }
-    
+
+    /**
+     * getter de la lista de categorias cogidas
+     * @return ArrayList con las categorias
+     */
+    public static ArrayList<String> getCategorias() {
+        return categorias;
+    }
+
     //Movimiento entre ventanas
+    /**
+     * Lleva de la ventana categoria a datos
+     * @param numParticipantes
+     */
     public static void categoriaToDatos(int numParticipantes) {
         categoriaSM.hide();
         categorias = categoriaSM.getVentana().getCategoria();
         datosSM = new DatosSM(numParticipantes);
     }
-    
-    public static ArrayList<String> getCategorias () {
-        return categorias;
-    }
-    
-    public static void datosToCategoria (){
+
+    /**
+     * Lleva de la ventana de datos a categoria
+     */
+    public static void datosToCategoria() {
         datosSM.close();
         categorias.clear();
         personas.clear();
         categoriaSM.show();
     }
-    
-    public static void datosToConfirmacion(int numParticipantes){
+
+    /**
+     * Lleva de la ventana de datos a la de confirmacion
+     * @param numParticipantes 
+     */
+    public static void datosToConfirmacion(int numParticipantes) {
         datosSM.hide();//deberia hacer dispose seguramente. deberia hacer un dispose para todas las ventanas
         confSM = new ConfirmacionSM(numParticipantes);
     }
-    
-    public static void ConfirmacionToDatos(){
+
+    /**
+     * Lleva de la ventana de confirmacion a la de datos
+     */
+    public static void ConfirmacionToDatos() {
         confSM.close();
-        for (int i = 0; i<datosSM.getNumParticipantes(); i++){
+        for (int i = 0; i < datosSM.getNumParticipantes(); i++) {
             personas.remove(1);
         }
         datosSM.show();
     }
-    public static void ConfirmacionToValidacion(){
+
+    /**
+     * Lleva de la ventana de confirmacion a la de validacion
+     */
+    public static void ConfirmacionToValidacion() {
         confSM.hide();
         validSM = new ValidacionSM();
     }
-    public static void ValidacionToConfirmacion(){
+
+    /**
+     * Lleva de la ventana de validacion a la de confirmacion
+     */
+    public static void ValidacionToConfirmacion() {
         validSM.close();
         confSM.show();
     }
 
     //Getters de maquinas de estado
+    /**
+     * Devuelve la maquina de estados de Categoria
+     * @return categoriaSM
+     */
     public static CategoriaSM getCategoriaSM() {
         return categoriaSM;
     }
 
+    /**
+     * Devuelve la maquina de estados de Datos
+     * @return datosSM
+     */
     public static DatosSM getDatosSM() {
         return datosSM;
     }
-    
-    public static ConfirmacionSM getConfSM(){
+
+    /**
+     * Devuelve la maquina de estados de Confirmacion
+     * @return confSM
+     */
+    public static ConfirmacionSM getConfSM() {
         return confSM;
     }
-    public static ValidacionSM getValidSM(){
+
+    /**
+     * Devuelve la maquina de estados de Validacion
+     * @return validSM
+     */
+    public static ValidacionSM getValidSM() {
         return validSM;
     }
 }
