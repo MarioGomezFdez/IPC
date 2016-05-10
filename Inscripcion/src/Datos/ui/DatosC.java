@@ -54,8 +54,14 @@ public class DatosC {
                 || datVista.getNIF().getText().equals("NIF*")
                 || datVista.getNIF().getText().equals("")) {
             datVista.getNota().setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
-            System.out.println("Ojocuidao");
             datosCorrecto = false;
+        }
+        if (!datVista.getNombre().getText().matches("^[a-zA-Z]+$")
+                || !datVista.getAp1().getText().matches("^[a-zA-Z]+$") 
+                || !datVista.getAp2().getText().matches("^[a-zA-Z]+$")){
+            
+                datVista.getNota().setText("<html><font color='red'>*Introduzca nombre y apellidos validos</font></html>");
+                datosCorrecto = false;
         }
         return datosCorrecto;
     }

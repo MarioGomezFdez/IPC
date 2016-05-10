@@ -40,6 +40,14 @@ public class CategoriaC {
             catVista.getAsterisco().setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
             datosCorrecto = false;
         }
+        if (!catVista.getNombre().getText().matches("^[a-zA-Z]+$")
+                || !catVista.getAp1().getText().matches("^[a-zA-Z]+$") 
+                || !catVista.getAp2().getText().matches("^[a-zA-Z]+$")){
+            
+                catVista.getAsterisco().setText("<html><font color='red'>*Introduzca nombre y apellidos validos</font></html>");
+                datosCorrecto = false;
+        }
+            
 
         return numCatCorrecto && datosCorrecto;
     }
