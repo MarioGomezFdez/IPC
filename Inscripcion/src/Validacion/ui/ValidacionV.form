@@ -102,8 +102,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="Usuario">
     </Component>
-    <Component class="javax.swing.JTextField" name="Contrase&#xf1;a">
-    </Component>
     <Component class="javax.swing.JButton" name="Continuar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Continuar"/>
@@ -128,6 +126,11 @@
     <Component class="javax.swing.JLabel" name="Instrucciones">
       <Properties>
         <Property name="text" type="java.lang.String" value="Introduzca nombre de usuario y contrase&#xf1;a (obligatorio): "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="Contrase&#xf1;a">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
       </Properties>
     </Component>
   </SubComponents>

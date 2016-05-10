@@ -36,11 +36,11 @@ public class ValidacionV extends javax.swing.JFrame {
         Us_lab = new javax.swing.JLabel();
         Con_lab = new javax.swing.JLabel();
         Usuario = new javax.swing.JTextField();
-        Contraseña = new javax.swing.JTextField();
         Continuar = new javax.swing.JButton();
         Volver = new javax.swing.JButton();
         NoCuenta = new javax.swing.JRadioButton();
         Instrucciones = new javax.swing.JLabel();
+        Contraseña = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +65,8 @@ public class ValidacionV extends javax.swing.JFrame {
         NoCuenta.setText("No tengo cuenta");
 
         Instrucciones.setText("Introduzca nombre de usuario y contraseña (obligatorio): ");
+
+        Contraseña.setText("jPasswordField1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,7 +154,7 @@ public class ValidacionV extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Con_lab;
     private javax.swing.JButton Continuar;
-    private javax.swing.JTextField Contraseña;
+    private javax.swing.JPasswordField Contraseña;
     private javax.swing.JLabel Instrucciones;
     private javax.swing.JRadioButton NoCuenta;
     private javax.swing.JLabel Us_lab;
