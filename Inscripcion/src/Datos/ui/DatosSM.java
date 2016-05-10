@@ -7,7 +7,6 @@ package Datos.ui;
 
 import Inscripcion.main.Inscripcion;
 import Inscripcion.model.Persona;
-
 import javax.swing.JFrame;
 
 /**
@@ -16,13 +15,13 @@ import javax.swing.JFrame;
  */
 public class DatosSM {
 
-    JFrame[] ventana;
+    DatosV[] ventana;
     int partActual, numParticipantes;
 
     public DatosSM(int numParticipantes) {
-        ventana = new JFrame[numParticipantes];
+        ventana = new DatosV[numParticipantes];
         for (int i = 0; i < numParticipantes; i++) {
-            ventana[i] = new JFrame();
+            ventana[i] = new DatosV();
         }
         this.numParticipantes = numParticipantes;
         partActual = 0;
@@ -32,23 +31,25 @@ public class DatosSM {
     public void start() {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                for (int i = 0; i < numParticipantes; i++) {
-                    ventana[i] = new DatosV();
-                }
+                
                 ventana[partActual].setVisible(true);
             }
         });
     }
 
     public void siguiente() {
+        Persona nuevaPersona;
         if (partActual < numParticipantes - 1) {
             hide();
             partActual++;
             show();
         } else {
             for (int i = 0; i < numParticipantes; i++){
- //               Inscripcion.addPersona(new Persona(ventana[i].getNombre(), ventana[i].getAp1(), ventana[i].getCorreo()) );
+                nuevaPersona = ventana[i].datControl.getPersona();
+                nuevaPersona.setCategoria(Inscripcion.getCategorias().get(i));
+                Inscripcion.addPersona(nuevaPersona);
             }
+            
             Inscripcion.datosToConfirmacion(numParticipantes);
         }
     }

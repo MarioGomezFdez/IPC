@@ -13,7 +13,7 @@ import javax.swing.JFrame;
  */
 public class CategoriaSM {
 
-    JFrame ventana = new JFrame();
+    CategoriaV ventana = new CategoriaV();
 
     public CategoriaSM() {
         start();
@@ -28,6 +28,10 @@ public class CategoriaSM {
         });
     }
 
+    public CategoriaV getVentana(){
+        return ventana;
+    }
+    
     public void hide() {
         ventana.setVisible(false);
     }

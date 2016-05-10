@@ -288,7 +288,7 @@ public class DatosV extends javax.swing.JFrame {
                         .addComponent(ButNinguno)
                         .addComponent(ButOtro))
                     .addComponent(OtraUni, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(DatosPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Continuar)
                     .addComponent(Volver))
@@ -430,13 +430,41 @@ public class DatosV extends javax.swing.JFrame {
     public javax.swing.JTextField getAp1() {
         return TextAp1;
     }
+    
+    public javax.swing.JTextField getAp2() {
+        return TextAp2;
+    }
 
     public javax.swing.JTextField getCorreo() {
         return TextCorreo;
     }
+    
+    public int getDia() {
+        return Integer.parseInt(CmbDia.getSelectedItem().toString());
+    }
+    
+    public String getMes() {
+        return (String)CmbMes.getSelectedItem().toString();
+    }
+    
+    public int getAno() {
+        return Integer.parseInt(CmbAno.getSelectedItem().toString());
+    }
+    
      public javax.swing.JTextField getNIF() {
         return TextNIF;
     }
+     
+    public boolean getHombre() {
+        return ButHombre.isSelected();
+    }
+    
+    public String getCentro() {
+        if (ButUVa.isSelected()){ return "UVa";
+        } else if (ButNinguno.isSelected()) { return "Sin centro";
+        } return TextOtraUni.getText();
+    }
+     
     public javax.swing.JLabel getNota() {
         return Nota;
     }

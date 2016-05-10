@@ -24,6 +24,7 @@ public class Inscripcion {
     private static ConfirmacionSM confSM;
     private static ValidacionSM validSM;
     private static ArrayList<Persona> personas;
+    private static ArrayList<String> categorias;
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -65,7 +66,12 @@ public class Inscripcion {
     //Movimiento entre ventanas
     public static void categoriaToDatos(int numParticipantes) {
         categoriaSM.hide();
+        categorias = categoriaSM.getVentana().getCategoria();
         datosSM = new DatosSM(numParticipantes);
+    }
+    
+    public static ArrayList<String> getCategorias () {
+        return categorias;
     }
     
     public static void datosToCategoria (){

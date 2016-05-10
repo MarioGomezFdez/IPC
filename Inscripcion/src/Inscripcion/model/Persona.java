@@ -22,17 +22,18 @@ public class Persona {
         
     }
     
-    public Persona(String nombre, String ap1, String correo, int dia, String mes, int ano, String centro, String nif, String categoria, boolean hombre) {
+    public Persona(String nombre, String ap1, String ap2, String correo, int dia, String mes, int ano, String centro, String nif, boolean hombre) {
         
         this.nombre = nombre;
         System.out.print(nombre);
         this.ap1 = ap1;
+        this.ap2 = ap2;
         this.correo = correo;
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
         this.centro = centro;
-        this.categoria = categoria;
+        categoria = "";
         this.hombre = hombre;
         this.nif = nif;
     }

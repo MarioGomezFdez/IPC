@@ -6,6 +6,7 @@
 package Datos.ui;
 
 import Inscripcion.main.Inscripcion;
+import Inscripcion.model.Persona;
 
 /**
  *
@@ -28,6 +29,14 @@ public class DatosC {
         Inscripcion.getDatosSM().siguiente();
     }
 
+    public Persona getPersona(){
+        String ap2="";
+        if (!datVista.getAp2().getText().equals("")&&!datVista.getAp2().getText().equals("Segundo apellido")){
+            ap2 = datVista.getAp2().getText();
+        }
+        return new Persona (datVista.getNombre().getText(), datVista.getAp1().getText(), ap2, datVista.getCorreo().getText(), datVista.getDia(), datVista.getMes(), datVista.getAno(), datVista.getCentro(), datVista.getNIF().getText(), datVista.getHombre());
+    }
+    
     public boolean validacion() {
 
         boolean datosCorrecto = true;

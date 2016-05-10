@@ -6,6 +6,7 @@
 package Categoria.ui;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.UIManager;
 
 /**
@@ -376,6 +377,23 @@ public class CategoriaV extends javax.swing.JFrame {
         return Correo_text;
     }
 
+    public ArrayList<String> getCategoria(){ 
+        //
+        ArrayList<String> categorias = new ArrayList();
+        for (int i = 0; i < getAbsoluta_spn(); i++){
+            categorias.add("Absoluta");
+        }
+        for (int i = 0; i < getAbsolutaSex_spn(); i++){
+            categorias.add("Absoluta por sexo");
+        }
+        for (int i = 0; i < getAlumnos_spn(); i++){
+            categorias.add("Alumnos");
+        }
+        for (int i = 0; i < getProfesores_spn(); i++){
+            categorias.add("Profesores");
+        }
+        return categorias;
+    }
 
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
         if (catControl.validacion()) {
@@ -420,38 +438,7 @@ public class CategoriaV extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Profesores_chkActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-     *//*
-        try {
-            
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CategoriaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CategoriaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CategoriaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CategoriaV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }*/
-    //</editor-fold>
-//
-//        /* Create and display the form */
-    //       java.awt.EventQueue.invokeLater(new Runnable() {
-    //          public void run() {
-    //             
-    //           new CategoriaV().setVisible(true);
-    //       }
-    //   });
-    // }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox AbsolutaSex_chk;

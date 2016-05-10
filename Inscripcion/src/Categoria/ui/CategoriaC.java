@@ -56,6 +56,7 @@ public class CategoriaC {
         Inscripcion.addPersona(newPersona);
         Inscripcion.categoriaToDatos((Integer) catVista.getAbsoluta_spn() + (Integer) catVista.getAbsolutaSex_spn() + (Integer) catVista.getAlumnos_spn() + (Integer) catVista.getProfesores_spn());
     }
+    
 
     public void exit() {
         System.exit(0);

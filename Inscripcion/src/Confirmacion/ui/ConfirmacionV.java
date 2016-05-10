@@ -489,70 +489,70 @@ public class ConfirmacionV extends javax.swing.JFrame {
    
    public void Rellena_1(){
        
-       Inscripcion.getPersona(0).getNombre();
+       Inscripcion.getPersona(1).getNombre();
        
-       Nombre_1.setText(Inscripcion.getPersona(0).getNombre());
-       Ap1_1.setText(Inscripcion.getPersona(0).getAp1());
-       Ap2_1.setText(Inscripcion.getPersona(0).getAp2());
-       Categoria_1.setText(Inscripcion.getPersona(0).getCategoria());
-       Centro_1.setText(Inscripcion.getPersona(0).getCentro());
-       Sexo_1.setText(Inscripcion.getPersona(0).getSexo());
-       Nif_1.setText(Inscripcion.getPersona(0).getNif());
-       Correo_1.setText(Inscripcion.getPersona(0).getCorreo());
+       Nombre_1.setText(Inscripcion.getPersona(1).getNombre());
+       Ap1_1.setText(Inscripcion.getPersona(1).getAp1());
+       Ap2_1.setText(Inscripcion.getPersona(1).getAp2());
+       Categoria_1.setText(Inscripcion.getPersona(1).getCategoria());
+       Centro_1.setText(Inscripcion.getPersona(1).getCentro());
+       Sexo_1.setText(Inscripcion.getPersona(1).getSexo());
+       Nif_1.setText(Inscripcion.getPersona(1).getNif());
+       Correo_1.setText(Inscripcion.getPersona(1).getCorreo());
 }
    
    public void Rellena_2(){
        
        jPanel2.setVisible(true);
        
-       Nombre_2.setText(Inscripcion.getPersona(1).getNombre());
-       Ap1_2.setText(Inscripcion.getPersona(1).getAp1());
-       Ap2_2.setText(Inscripcion.getPersona(1).getAp2());
-       Categoria_2.setText(Inscripcion.getPersona(1).getCategoria());
-       Centro_2.setText(Inscripcion.getPersona(1).getCentro());
-       Sexo_2.setText(Inscripcion.getPersona(1).getSexo());
-       Nif_2.setText(Inscripcion.getPersona(1).getNif());
-       Correo_2.setText(Inscripcion.getPersona(1).getCorreo());
+       Nombre_2.setText(Inscripcion.getPersona(2).getNombre());
+       Ap1_2.setText(Inscripcion.getPersona(2).getAp1());
+       Ap2_2.setText(Inscripcion.getPersona(2).getAp2());
+       Categoria_2.setText(Inscripcion.getPersona(2).getCategoria());
+       Centro_2.setText(Inscripcion.getPersona(2).getCentro());
+       Sexo_2.setText(Inscripcion.getPersona(2).getSexo());
+       Nif_2.setText(Inscripcion.getPersona(2).getNif());
+       Correo_2.setText(Inscripcion.getPersona(2).getCorreo());
    }
    
    public void Rellena_3(){
        
        jPanel3.setVisible(true);
        
-       Nombre_3.setText(Inscripcion.getPersona(2).getNombre());
-       Ap1_3.setText(Inscripcion.getPersona(2).getAp1());
-       Ap2_3.setText(Inscripcion.getPersona(2).getAp2());
-       Categoria_3.setText(Inscripcion.getPersona(2).getCategoria());
-       Centro_3.setText(Inscripcion.getPersona(2).getCentro());
-       Sexo_3.setText(Inscripcion.getPersona(2).getSexo());
-       Nif_3.setText(Inscripcion.getPersona(2).getNif());
-       Correo_3.setText(Inscripcion.getPersona(2).getCorreo());
+       Nombre_3.setText(Inscripcion.getPersona(3).getNombre());
+       Ap1_3.setText(Inscripcion.getPersona(3).getAp1());
+       Ap2_3.setText(Inscripcion.getPersona(3).getAp2());
+       Categoria_3.setText(Inscripcion.getPersona(3).getCategoria());
+       Centro_3.setText(Inscripcion.getPersona(3).getCentro());
+       Sexo_3.setText(Inscripcion.getPersona(3).getSexo());
+       Nif_3.setText(Inscripcion.getPersona(3).getNif());
+       Correo_3.setText(Inscripcion.getPersona(3).getCorreo());
    }
    public void Rellena_4(){
        
        jPanel4.setVisible(true);
        
-       Nombre_4.setText(Inscripcion.getPersona(3).getNombre());
-       Ap1_4.setText(Inscripcion.getPersona(3).getAp1());
-       Ap2_4.setText(Inscripcion.getPersona(3).getAp2());
-       Categoria_4.setText(Inscripcion.getPersona(3).getCategoria());
-       Centro_4.setText(Inscripcion.getPersona(3).getCentro());
-       Sexo_4.setText(Inscripcion.getPersona(3).getSexo());
-       Nif_4.setText(Inscripcion.getPersona(3).getNif());
-       Correo_4.setText(Inscripcion.getPersona(3).getCorreo());
+       Nombre_4.setText(Inscripcion.getPersona(4).getNombre());
+       Ap1_4.setText(Inscripcion.getPersona(4).getAp1());
+       Ap2_4.setText(Inscripcion.getPersona(4).getAp2());
+       Categoria_4.setText(Inscripcion.getPersona(4).getCategoria());
+       Centro_4.setText(Inscripcion.getPersona(4).getCentro());
+       Sexo_4.setText(Inscripcion.getPersona(4).getSexo());
+       Nif_4.setText(Inscripcion.getPersona(4).getNif());
+       Correo_4.setText(Inscripcion.getPersona(4).getCorreo());
    }
    public void Rellena_5(){
        
        jPanel5.setVisible(true);
        
-       Nombre_5.setText(Inscripcion.getPersona(4).getNombre());
-       Ap1_5.setText(Inscripcion.getPersona(4).getAp1());
-       Ap2_5.setText(Inscripcion.getPersona(4).getAp2());
-       Categoria_5.setText(Inscripcion.getPersona(4).getCategoria());
-       Centro_5.setText(Inscripcion.getPersona(4).getCentro());
-       Sexo_5.setText(Inscripcion.getPersona(4).getSexo());
-       Nif_5.setText(Inscripcion.getPersona(4).getNif());
-       Correo_5.setText(Inscripcion.getPersona(4).getCorreo());
+       Nombre_5.setText(Inscripcion.getPersona(5).getNombre());
+       Ap1_5.setText(Inscripcion.getPersona(5).getAp1());
+       Ap2_5.setText(Inscripcion.getPersona(5).getAp2());
+       Categoria_5.setText(Inscripcion.getPersona(5).getCategoria());
+       Centro_5.setText(Inscripcion.getPersona(5).getCentro());
+       Sexo_5.setText(Inscripcion.getPersona(5).getSexo());
+       Nif_5.setText(Inscripcion.getPersona(5).getNif());
+       Correo_5.setText(Inscripcion.getPersona(5).getCorreo());
    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
