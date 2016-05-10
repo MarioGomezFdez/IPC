@@ -88,7 +88,7 @@ public class Inscripcion {
     
     public static void ConfirmacionToDatos(){
         confSM.close();
-        for (int i = 0; i<=personas.size()+1; i++){
+        for (int i = 0; i<datosSM.getNumParticipantes(); i++){
             personas.remove(1);
         }
         datosSM.show();

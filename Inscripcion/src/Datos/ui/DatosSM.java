@@ -64,6 +64,10 @@ public class DatosSM {
         }
     }
 
+    public int getNumParticipantes(){
+        return numParticipantes;
+    }
+    
     public void hide() {
         ventana[partActual].setVisible(false);
     }

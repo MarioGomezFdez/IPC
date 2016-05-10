@@ -84,6 +84,7 @@ public class DatosV extends javax.swing.JFrame {
         DatosPart.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Participante"));
 
         TextNombre.setText("Nombre*");
+        TextNombre.setNextFocusableComponent(TextAp1);
         TextNombre.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 TextNombreFocusGained(evt);
