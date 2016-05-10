@@ -10,18 +10,21 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Mario
+ * @author Mario Gomez Fernandez
+ * @author Miguel Bayon Sanz
  */
 public class ValidacionV extends javax.swing.JFrame {
+
     ValidacionC valControl;
+
     /**
      * Creates new form Validacion
      */
     public ValidacionV() {
         initComponents();
-         setLocationRelativeTo(null);
-         valControl = new ValidacionC(this);
-         
+        setLocationRelativeTo(null);
+        valControl = new ValidacionC(this);
+
     }
 
     /**
@@ -123,33 +126,65 @@ public class ValidacionV extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Maneja el evento del boton Continuar
+     *
+     * @param evt evento de pulsar el boton
+     */
     private void ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinuarActionPerformed
-        if(valControl.Validar()){
-        JOptionPane pasarela = new JOptionPane();
-        JOptionPane.showMessageDialog(pasarela, "Redirigido a una pasarela de pago segura.");
-        valControl.Salir();
+        if (valControl.Validar()) {
+            JOptionPane pasarela = new JOptionPane();
+            JOptionPane.showMessageDialog(pasarela, "Redirigido a una pasarela de pago segura.");
+            valControl.Salir();
         }
     }//GEN-LAST:event_ContinuarActionPerformed
 
+    /**
+     * Maneja el evento del boton Volver
+     *
+     * @param evt evento de pulsar el boton
+     */
     private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
         valControl.Volver();
     }//GEN-LAST:event_VolverActionPerformed
-    public boolean getNoCuenta(){
+
+    /**
+     * devuelve true si esta pulsado el boton NoCuenta
+     */
+    public boolean getNoCuenta() {
         return NoCuenta.isSelected();
     }
-    public javax.swing.JLabel getInstrucciones(){
+
+    /**
+     * getter del label GetInstrucciones
+     *
+     * @return Instrucciones
+     */
+    public javax.swing.JLabel getInstrucciones() {
         return Instrucciones;
     }
-    public String getUsuario(){
+
+    /**
+     * getter del texto contenido en el JTextField Usuario
+     *
+     * @return String contenido en Usuario
+     */
+    public String getUsuario() {
         return Usuario.getText();
     }
-    public String getContraseña(){
+
+    /**
+     * getter del String contenido en el JPasswordField Contraseña
+     *
+     * @return String contenido en Contraseña
+     */
+    public String getContraseña() {
         return Contraseña.getText();
     }
     /**
      * @param args the command line arguments
      */
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Con_lab;
@@ -162,5 +197,4 @@ public class ValidacionV extends javax.swing.JFrame {
     private javax.swing.JButton Volver;
     // End of variables declaration//GEN-END:variables
 
-    
 }
