@@ -17,8 +17,13 @@ public class ConfirmacionV extends javax.swing.JFrame {
     
     public ConfirmacionV() {
         initComponents();
+        jPanel2.setVisible(false);
+        jPanel3.setVisible(false);
+        jPanel4.setVisible(false);
+        jPanel5.setVisible(false);
         setLocationRelativeTo(null);
         confC = new ConfirmacionC (this);
+        
     }
 
     /**
@@ -31,8 +36,8 @@ public class ConfirmacionV extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
+        jPanelContenedor = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         Nombre_1 = new javax.swing.JLabel();
         Ap1_1 = new javax.swing.JLabel();
         Ap2_1 = new javax.swing.JLabel();
@@ -41,7 +46,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
         Sexo_1 = new javax.swing.JLabel();
         Categoria_1 = new javax.swing.JLabel();
         Centro_1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         Nombre_2 = new javax.swing.JLabel();
         Ap1_2 = new javax.swing.JLabel();
         Ap2_2 = new javax.swing.JLabel();
@@ -50,7 +55,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
         Sexo_2 = new javax.swing.JLabel();
         Categoria_2 = new javax.swing.JLabel();
         Centro_2 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         Nombre_3 = new javax.swing.JLabel();
         Ap1_3 = new javax.swing.JLabel();
         Ap2_3 = new javax.swing.JLabel();
@@ -59,7 +64,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
         Sexo_3 = new javax.swing.JLabel();
         Categoria_3 = new javax.swing.JLabel();
         Centro_3 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         Nombre_4 = new javax.swing.JLabel();
         Ap1_4 = new javax.swing.JLabel();
         Ap2_4 = new javax.swing.JLabel();
@@ -68,7 +73,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
         Sexo_4 = new javax.swing.JLabel();
         Categoria_4 = new javax.swing.JLabel();
         Centro_4 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         Nombre_5 = new javax.swing.JLabel();
         Ap1_5 = new javax.swing.JLabel();
         Ap2_5 = new javax.swing.JLabel();
@@ -88,10 +93,10 @@ public class ConfirmacionV extends javax.swing.JFrame {
         jScrollPane2.setPreferredSize(new java.awt.Dimension(440, 1729));
         jScrollPane2.setVerifyInputWhenFocusTarget(false);
 
-        jPanel1.setLayout(new java.awt.GridLayout(5, 1));
+        jPanelContenedor.setLayout(new java.awt.GridLayout(5, 1));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Primer participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
-        jPanel2.setPreferredSize(new java.awt.Dimension(150, 150));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Primer participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(150, 150));
 
         Nombre_1.setText("Nombre");
 
@@ -109,14 +114,14 @@ public class ConfirmacionV extends javax.swing.JFrame {
 
         Centro_1.setText("Centro");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Nombre_1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Ap1_1)
@@ -129,11 +134,11 @@ public class ConfirmacionV extends javax.swing.JFrame {
                     .addComponent(Centro_1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre_1)
                     .addComponent(Ap1_1)
                     .addComponent(Ap2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -150,9 +155,9 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2);
+        jPanelContenedor.add(jPanel1);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
         Nombre_2.setText("Nombre");
 
@@ -170,14 +175,14 @@ public class ConfirmacionV extends javax.swing.JFrame {
 
         Centro_2.setText("Centro");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(Nombre_2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Ap1_2)
@@ -190,11 +195,11 @@ public class ConfirmacionV extends javax.swing.JFrame {
                     .addComponent(Centro_2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre_2)
                     .addComponent(Ap1_2)
                     .addComponent(Ap2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -211,9 +216,9 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3);
+        jPanelContenedor.add(jPanel2);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tercer participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tercer participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
         Nombre_3.setText("Nombre");
 
@@ -231,14 +236,14 @@ public class ConfirmacionV extends javax.swing.JFrame {
 
         Centro_3.setText("Centro");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(Nombre_3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Ap1_3)
@@ -251,11 +256,11 @@ public class ConfirmacionV extends javax.swing.JFrame {
                     .addComponent(Centro_3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre_3)
                     .addComponent(Ap1_3)
                     .addComponent(Ap2_3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -272,9 +277,9 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel4);
+        jPanelContenedor.add(jPanel3);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cuarto participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cuarto participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
         Nombre_4.setText("Nombre");
 
@@ -292,14 +297,14 @@ public class ConfirmacionV extends javax.swing.JFrame {
 
         Centro_4.setText("Centro");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(Nombre_4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Ap1_4)
@@ -312,11 +317,11 @@ public class ConfirmacionV extends javax.swing.JFrame {
                     .addComponent(Centro_4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre_4)
                     .addComponent(Ap1_4)
                     .addComponent(Ap2_4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -333,9 +338,9 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel5);
+        jPanelContenedor.add(jPanel4);
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quinto participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quinto participante", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
         Nombre_5.setText("Nombre");
 
@@ -353,14 +358,14 @@ public class ConfirmacionV extends javax.swing.JFrame {
 
         Centro_5.setText("Centro");
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(Nombre_5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Ap1_5)
@@ -373,11 +378,11 @@ public class ConfirmacionV extends javax.swing.JFrame {
                     .addComponent(Centro_5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Nombre_5)
                     .addComponent(Ap1_5)
                     .addComponent(Ap2_5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -394,9 +399,9 @@ public class ConfirmacionV extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel6);
+        jPanelContenedor.add(jPanel5);
 
-        jScrollPane2.setViewportView(jPanel1);
+        jScrollPane2.setViewportView(jPanelContenedor);
 
         Pagar.setText("Pagar");
         Pagar.addActionListener(new java.awt.event.ActionListener() {
@@ -450,32 +455,97 @@ public class ConfirmacionV extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionV.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+   public void setLAbels(int participantes){
+       
+      switch(participantes){
+          
+          case 5:
+              
+              Rellena_5();
+          
+          case 4:
+              Rellena_4();
+              
+          case 3:
+              Rellena_3(); 
+              
+          case 2:
+              Rellena_2();  
+          case 1:
+              Rellena_1();
+              break;
+              
+          }
+      }
+       
+   
+   public void Rellena_1(){
+       
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ConfirmacionV().setVisible(true);
-            }
-        });
-    }
+       
+       Nombre_1.setText("");
+       Ap1_1.setText("");
+       Ap2_1.setText("");
+       Categoria_1.setText("");
+       Centro_1.setText("");
+       Sexo_1.setText("");
+       Nif_1.setText("");
+       Correo_1.setText("");
+}
+   
+   public void Rellena_2(){
+       
+       jPanel2.setVisible(true);
+       
+       Nombre_2.setText("");
+       Ap1_2.setText("");
+       Ap2_2.setText("");
+       Categoria_2.setText("");
+       Centro_2.setText("");
+       Sexo_2.setText("");
+       Nif_2.setText("");
+       Correo_2.setText("");
+   }
+   
+   public void Rellena_3(){
+       
+       jPanel3.setVisible(true);
+       
+       Nombre_3.setText("");
+       Ap1_3.setText("");
+       Ap2_3.setText("");
+       Categoria_3.setText("");
+       Centro_3.setText("");
+       Sexo_3.setText("");
+       Nif_3.setText("");
+       Correo_3.setText("");
+   }
+   public void Rellena_4(){
+       
+       jPanel4.setVisible(true);
+       
+       Nombre_4.setText("");
+       Ap1_4.setText("");
+       Ap2_4.setText("");
+       Categoria_4.setText("");
+       Centro_4.setText("");
+       Sexo_4.setText("");
+       Nif_4.setText("");
+       Correo_4.setText("");
+   }
+   public void Rellena_5(){
+       
+       jPanel5.setVisible(true);
+       
+       Nombre_5.setText("");
+       Ap1_5.setText("");
+       Ap2_5.setText("");
+       Categoria_5.setText("");
+       Centro_5.setText("");
+       Sexo_5.setText("");
+       Nif_5.setText("");
+       Correo_5.setText("");
+   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Ap1_1;
@@ -525,7 +595,7 @@ public class ConfirmacionV extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanelContenedor;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
