@@ -22,8 +22,8 @@ public class DatosC {
     public void abreAnterior() {
         Inscripcion.getDatosSM().anterior();
     }
-    
-    public void abreSiguiente(){
+
+    public void abreSiguiente() {
         Inscripcion.getDatosSM().siguiente();
     }
 
@@ -31,11 +31,18 @@ public class DatosC {
 
         boolean datosCorrecto = true;
 
-        if (((datVista.getNombre().equals("Nombre*")) || (datVista.getNombre().getText().equals(""))) || ((datVista.getAp1().getText().equals("Primer apellido*")) || (datVista.getAp1().getText().equals(""))) || ((datVista.getCorreo().getText().equals("Correo*")) || (datVista.getCorreo().getText().equals(""))) || ((datVista.getNIF().equals("NIF*")) || (datVista.getNIF().getText().equals("")))) {
+        if (datVista.getNombre().getText().equals("Nombre*")
+                || datVista.getNombre().getText().equals("")
+                || datVista.getAp1().getText().equals("Primer apellido*")
+                || datVista.getAp1().getText().equals("")
+                || datVista.getCorreo().getText().equals("Correo*")
+                || datVista.getCorreo().getText().equals("")
+                || datVista.getNIF().getText().equals("NIF*")
+                || datVista.getNIF().getText().equals("")) {
             datVista.getNota().setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
+            System.out.println("Ojocuidao");
             datosCorrecto = false;
         }
-
         return datosCorrecto;
     }
 }

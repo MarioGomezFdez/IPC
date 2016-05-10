@@ -25,21 +25,26 @@ public class CategoriaC {
         d = (Integer) catVista.getProfesores_spn();
         total = a + b + c + d;
 
-        if ((total > 5)||(total == 0)) {
+        if ((total > 5) || (total == 0)) {
             catVista.getNota().setText("<html><font color='red'>Nota: Maximo 5 participaciones, minimo 1</font></html>");
             numCatCorrecto = false;
         }
 
-        if (((catVista.getNombre().equals("Nombre*")) || (catVista.getNombre().getText().equals(""))) || ((catVista.getAp1().getText().equals("Primer apellido*")) || (catVista.getAp1().getText().equals(""))) || ((catVista.getCorreo().getText().equals("Correo*")) || (catVista.getCorreo().getText().equals("")))) {
+        if (catVista.getNombre().getText().equals("Nombre*")
+                || catVista.getNombre().getText().equals("")
+                || catVista.getAp1().getText().equals("Primer apellido*")
+                || catVista.getAp1().getText().equals("")
+                || catVista.getCorreo().getText().equals("Correo*")
+                || catVista.getCorreo().getText().equals("")) {
             catVista.getAsterisco().setText("<html><font color='red'>*Los campos marcados son obligatorios</font></html>");
             datosCorrecto = false;
         }
-        
+
         return numCatCorrecto && datosCorrecto;
     }
 
     public void abreVentanaParticipante() {
-        Inscripcion.categoriaToDatos((Integer) catVista.getAbsoluta_spn()+(Integer) catVista.getAbsolutaSex_spn()+(Integer) catVista.getAlumnos_spn()+(Integer) catVista.getProfesores_spn());
+        Inscripcion.categoriaToDatos((Integer) catVista.getAbsoluta_spn() + (Integer) catVista.getAbsolutaSex_spn() + (Integer) catVista.getAlumnos_spn() + (Integer) catVista.getProfesores_spn());
     }
 
     public void exit() {

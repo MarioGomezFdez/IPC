@@ -21,6 +21,7 @@ public class ValidacionV extends javax.swing.JFrame {
         initComponents();
          setLocationRelativeTo(null);
          valControl = new ValidacionC(this);
+         
     }
 
     /**
