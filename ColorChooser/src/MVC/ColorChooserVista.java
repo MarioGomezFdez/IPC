@@ -47,12 +47,22 @@ public class ColorChooserVista extends javax.swing.JFrame {
         slideR.setValue(127);
         slideR.setBorder(javax.swing.BorderFactory.createTitledBorder("Rojo"));
         slideR.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        slideR.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slideRStateChanged(evt);
+            }
+        });
 
         slideV.setMaximum(255);
         slideV.setMinorTickSpacing(10);
         slideV.setPaintTicks(true);
         slideV.setValue(127);
         slideV.setBorder(javax.swing.BorderFactory.createTitledBorder("Verde"));
+        slideV.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slideVStateChanged(evt);
+            }
+        });
 
         slideA.setMaximum(255);
         slideA.setMinorTickSpacing(10);
@@ -60,6 +70,11 @@ public class ColorChooserVista extends javax.swing.JFrame {
         slideA.setValue(127);
         slideA.setBorder(javax.swing.BorderFactory.createTitledBorder("Azul"));
         slideA.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        slideA.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slideAStateChanged(evt);
+            }
+        });
 
         tHexad.setEditable(false);
         tHexad.setText("Pulse el botón Obtener");
@@ -68,7 +83,6 @@ public class ColorChooserVista extends javax.swing.JFrame {
         tDec.setText("Pulse el botón Obtener");
 
         tColor.setEditable(false);
-        tColor.setBackground(new java.awt.Color(255, 255, 255));
         tColor.setMaximumSize(new java.awt.Dimension(46, 46));
         tColor.setMinimumSize(new java.awt.Dimension(46, 46));
         tColor.setPreferredSize(new java.awt.Dimension(46, 46));
@@ -95,7 +109,7 @@ public class ColorChooserVista extends javax.swing.JFrame {
                             .addComponent(tDec, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tHexad, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(obtener, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                        .addComponent(obtener, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -140,6 +154,18 @@ public class ColorChooserVista extends javax.swing.JFrame {
     private void obtenerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_obtenerMouseClicked
         controlador.setColores();
     }//GEN-LAST:event_obtenerMouseClicked
+
+    private void slideAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slideAStateChanged
+        controlador.setColores();
+    }//GEN-LAST:event_slideAStateChanged
+
+    private void slideVStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slideVStateChanged
+        controlador.setColores();
+    }//GEN-LAST:event_slideVStateChanged
+
+    private void slideRStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slideRStateChanged
+        controlador.setColores();
+    }//GEN-LAST:event_slideRStateChanged
 
     public int getValorSlideR() {
         return slideR.getValue();

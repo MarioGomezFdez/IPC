@@ -65,7 +65,7 @@
                               <Component id="tHexad" alignment="0" min="-2" pref="275" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="obtener" pref="210" max="32767" attributes="0"/>
+                          <Component id="obtener" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="tColor" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -111,9 +111,12 @@
               </Border>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="slideRStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSlider" name="slideV">
           <Properties>
@@ -127,6 +130,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="slideVStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSlider" name="slideA">
           <Properties>
@@ -140,9 +146,12 @@
               </Border>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="slideAStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="tHexad">
           <Properties>
@@ -159,9 +168,6 @@
         <Component class="javax.swing.JTextField" name="tColor">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[46, 46]"/>
             </Property>
